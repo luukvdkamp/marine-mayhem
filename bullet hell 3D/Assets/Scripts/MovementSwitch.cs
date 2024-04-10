@@ -57,12 +57,6 @@ public class MovementSwitch : MonoBehaviour
             //look at mouse position
             transform.LookAt(targetPos);
 
-            //limit rotation
-            Vector3 currentRotation = transform.rotation.eulerAngles;
-            float clampedYRotation = Mathf.Clamp(currentRotation.y, -maxYRotation, maxYRotation);
-            float clampedZRotation = Mathf.Clamp(currentRotation.z, -maxZRotation, maxZRotation);
-            transform.rotation = Quaternion.Euler(currentRotation.x, clampedYRotation, clampedZRotation);
-
             //move forward and backwards
             float forward = Input.GetAxis("Vertical");
             transform.Translate(transform.forward * forward * moveSpeed * Time.deltaTime);
