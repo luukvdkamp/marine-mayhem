@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MovementSwitch : MonoBehaviour
 {
     [Header("CamPosition")]
     public Transform camPosition;
 
-    public Transform twoDPosition;
-    public Transform threeDPosition;
-
-    [Header("2DMovement")]
-    public float forwardSpeed;
-    public float sideSpeed;
+    public GameObject cdtwo;
+    public GameObject cdthree;
 
     [Header("3DMovement")]
+    public float sensitivity = 100f;
+    public Transform playerBody;
+
+    float xRotation = 0f;
+
+    [Header("2DMovement")]
     public Transform lookPosition;
     public float moveSpeed;
     public float downSpeed;
@@ -24,30 +27,46 @@ public class MovementSwitch : MonoBehaviour
     public bool inGang;
     void Update()
     {
+        //3D
         if(inGang)
         {
-            //move sideways
-            float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(Vector3.right * sideMovement * sideSpeed * Time.deltaTime);
+            cdtwo.SetActive(false);
+            cdthree.SetActive(true);
 
-            //forward
-            if(Input.GetKey(KeyCode.LeftShift))
+            Cursor.lockState = CursorLockMode.Locked;
+
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+
+            // Rotate the camera around the y-axis based on mouse X movement
+            transform.Rotate(Vector3.up * mouseX);
+
+            // Rotate the camera around the x-axis based on mouse Y movement
+            transform.Rotate(-Vector3.left * mouseY);
+
+            float upMovement = Input.GetAxis("Vertical");
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                float forwardMovement = Input.GetAxis("Vertical");
-                transform.Translate(transform.forward * forwardMovement * forwardSpeed * Time.deltaTime);
+                transform.Translate(Vector3.down * upMovement * downSpeed * Time.deltaTime);
             }
 
-            //down and up
             else
             {
-                float upMovement = Input.GetAxis("Vertical");
-                transform.Translate(Vector3.up * upMovement * sideSpeed * Time.deltaTime);
+                transform.Translate(transform.right * upMovement * moveSpeed * Time.deltaTime);
             }
 
+            float sideMovement = Input.GetAxis("Horizontal");
+            transform.Translate(-transform.forward * sideMovement * moveSpeed * Time.deltaTime);
         }
 
+        //2D
         else
         {
+            cdtwo.SetActive(true);
+            cdthree.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.None;
+
             // Get the mouse position
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = 4;
