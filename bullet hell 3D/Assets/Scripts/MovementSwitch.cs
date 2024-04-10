@@ -11,6 +11,8 @@ public class MovementSwitch : MonoBehaviour
     public GameObject cdtwo;
     public GameObject cdthree;
 
+    public GameObject submarine;
+
     [Header("3DMovement")]
     public float sensitivity = 100f;
     public GameObject threeD;
@@ -41,11 +43,11 @@ public class MovementSwitch : MonoBehaviour
         }
 
         //3D
-        if(inGang)
+        if(inGang == false)
         {
             cdtwo.SetActive(false);
             cdthree.SetActive(true);
-            GetComponent<MeshRenderer>().enabled = false;
+            submarine.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
 
             float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
@@ -77,7 +79,7 @@ public class MovementSwitch : MonoBehaviour
         {
             cdtwo.SetActive(true);
             cdthree.SetActive(false);
-            GetComponent<MeshRenderer>().enabled = true;
+            submarine.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
 
             // Get the mouse position
