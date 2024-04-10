@@ -127,17 +127,18 @@ public class MovementSwitch : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "gang")
+        if (other.gameObject.tag == "gang")
         {
             inGang = true;
+            print("working");
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "gang")
+        if (other.gameObject.tag == "gang")
         {
             inGang = false;
         }
