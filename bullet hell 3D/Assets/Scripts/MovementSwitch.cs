@@ -13,9 +13,9 @@ public class MovementSwitch : MonoBehaviour
 
     [Header("3DMovement")]
     public float sensitivity = 100f;
-    public Transform playerBody;
-
-    float xRotation = 0f;
+    public GameObject threeD;
+    public float downSpeedThree;
+    public float speedThree;
 
     [Header("2DMovement")]
     public Transform lookPosition;
@@ -27,12 +27,25 @@ public class MovementSwitch : MonoBehaviour
     public bool inGang;
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(inGang)
+            {
+                inGang = false;
+            }
+
+            else
+            {
+                inGang = true;
+            }
+        }
+
         //3D
         if(inGang)
         {
             cdtwo.SetActive(false);
             cdthree.SetActive(true);
-
+            GetComponent<MeshRenderer>().enabled = false;
             Cursor.lockState = CursorLockMode.Locked;
 
             float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
@@ -44,19 +57,19 @@ public class MovementSwitch : MonoBehaviour
             // Rotate the camera around the x-axis based on mouse Y movement
             transform.Rotate(-Vector3.left * mouseY);
 
-            float upMovement = Input.GetAxis("Vertical");
+            float upMovement = Input.GetAxis("Vertical") * speedThree * Time.deltaTime;
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                transform.Translate(Vector3.down * upMovement * downSpeed * Time.deltaTime);
+                transform.Translate(-Vector3.down * upMovement * downSpeedThree * Time.deltaTime);
             }
 
             else
             {
-                transform.Translate(transform.right * upMovement * moveSpeed * Time.deltaTime);
+                transform.Translate(-transform.forward * upMovement, Space.World);
             }
 
             float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(-transform.forward * sideMovement * moveSpeed * Time.deltaTime);
+            transform.Translate(-transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
         }
 
         //2D
@@ -64,7 +77,7 @@ public class MovementSwitch : MonoBehaviour
         {
             cdtwo.SetActive(true);
             cdthree.SetActive(false);
-
+            GetComponent<MeshRenderer>().enabled = true;
             Cursor.lockState = CursorLockMode.None;
 
             // Get the mouse position
@@ -90,7 +103,7 @@ public class MovementSwitch : MonoBehaviour
             else
             {
                 // Calculate rotation towards the target position
-                targetRotation = Quaternion.LookRotation(screenCenter - transform.position);
+                targetRotation = Quaternion.Euler(0, -270, transform.rotation.z);
 
                 // Smoothly rotate towards the target rotation
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -104,27 +117,29 @@ public class MovementSwitch : MonoBehaviour
 
             else
             {
-                transform.Translate(-transform.right * upMovement * moveSpeed * Time.deltaTime);
+                transform.Translate(transform.forward * upMovement * moveSpeed * Time.deltaTime, Space.World);
             }
 
             float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(transform.forward * sideMovement * moveSpeed * Time.deltaTime);
+            transform.Translate(transform.right * sideMovement * moveSpeed * Time.deltaTime, Space.World);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.gameObject.tag == "gang")
+        if (collision.gameObject.tag == "gang")
         {
             inGang = true;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if(other.gameObject.tag == "gang")
+        if (collision.gameObject.tag == "gang")
         {
             inGang = false;
         }
     }
+
+ 
 }
