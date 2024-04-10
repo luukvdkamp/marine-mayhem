@@ -55,7 +55,7 @@ public class MovementSwitch : MonoBehaviour
             transform.Rotate(Vector3.up * mouseX);
 
             // Rotate the camera around the x-axis based on mouse Y movement
-            transform.Rotate(-Vector3.left * mouseY);
+            transform.Rotate(Vector3.left * mouseY);
 
             float upMovement = Input.GetAxis("Vertical") * speedThree * Time.deltaTime;
             if (Input.GetKey(KeyCode.LeftShift))
@@ -65,11 +65,11 @@ public class MovementSwitch : MonoBehaviour
 
             else
             {
-                transform.Translate(-transform.forward * upMovement, Space.World);
+                transform.Translate(transform.forward * upMovement, Space.World);
             }
 
             float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(-transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
+            transform.Translate(transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
         }
 
         //2D
