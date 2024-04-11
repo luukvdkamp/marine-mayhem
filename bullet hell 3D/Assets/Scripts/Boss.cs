@@ -11,7 +11,8 @@ public class Boss : MonoBehaviour
     {
         if(isHit)
         {
-            Destroy(door);
+            door.GetComponent<AudioSource>().Play();
+            door.GetComponent<Door>().opening = true;
             Destroy(gameObject);
         }
     }

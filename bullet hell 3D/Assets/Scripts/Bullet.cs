@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed;
+    public AudioSource bulletSpawn;
 
     void Update()
     {
