@@ -21,8 +21,8 @@ public class MovementSwitch : MonoBehaviour
 
     [Header("2DMovement")]
     public Transform lookPosition;
-    public float moveSpeed;
-    public float downSpeed;
+    public float horizontalSpeed;
+    public float verticalSpeed;
     public float rotationSpeed;
     public float minDistanceFromCenter;
     public Quaternion targetRotation;
@@ -114,16 +114,16 @@ public class MovementSwitch : MonoBehaviour
             float upMovement = Input.GetAxis("Vertical");
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                transform.Translate(-Vector3.down * upMovement * downSpeed * Time.deltaTime);
+                transform.Translate(-Vector3.down * upMovement * verticalSpeed * Time.deltaTime);
             }
 
             else
             {
-                transform.Translate(transform.forward * upMovement * moveSpeed * Time.deltaTime, Space.World);
+                transform.Translate(transform.forward * upMovement * horizontalSpeed * Time.deltaTime, Space.World);
             }
 
             float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(transform.right * sideMovement * moveSpeed * Time.deltaTime, Space.World);
+            transform.Translate(transform.right * sideMovement * horizontalSpeed * Time.deltaTime, Space.World);
         }
     }
 
