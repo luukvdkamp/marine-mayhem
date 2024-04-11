@@ -10289,6 +10289,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: lil submarine
       objectReference: {fileID: 0}
+    - target: {fileID: 6829333093618665122, guid: 873377ef33aec0b4883e2b6e98f3d068,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2f25934db30c904a95d17441f059966, type: 2}
+    - target: {fileID: 8100320773420232829, guid: 873377ef33aec0b4883e2b6e98f3d068,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2f25934db30c904a95d17441f059966, type: 2}
+    - target: {fileID: 8730303016566787287, guid: 873377ef33aec0b4883e2b6e98f3d068,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2f25934db30c904a95d17441f059966, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873377ef33aec0b4883e2b6e98f3d068, type: 3}
 --- !u!1 &826286702
