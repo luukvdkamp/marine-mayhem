@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Boss : MonoBehaviour
 {
     public bool isHit; //when hit
     public bool playerInBossArea; //check if player is in boss area
 
+    public string bossName;
+
     public GameObject door;
 
     public GameObject bossHealthCanvas;
     public Slider healthSlider;
+    public TextMeshProUGUI bossNameText;
 
     //dont edit (bullet changes this value)
     public int bulletDamage;
@@ -20,20 +24,24 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        //when hit
-        if(isHit && playerInBossArea)
+        if(playerInBossArea)
         {
-            healthSlider.value -= bulletDamage;
-            isHit = false;
-        }
+            //when hit
+            if (isHit)
+            {
+                healthSlider.value -= bulletDamage;
+                isHit = false;
+            }
 
-        //dead
-        if(healthSlider.value == 0)
-        {
-            door.GetComponent<AudioSource>().Play();
-            door.GetComponent<Door>().opening = true;
-            Destroy(gameObject);
+            //dead
+            if (healthSlider.value == 0)
+            {
+                door.GetComponent<AudioSource>().Play();
+                door.GetComponent<Door>().opening = true;
+                Destroy(gameObject);
+            }
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,6 +51,7 @@ public class Boss : MonoBehaviour
             if(firstTimeEncounter == 0)
             {
                 healthSlider.value = healthSlider.maxValue;
+                bossNameText.text = bossName;
             }
 
             firstTimeEncounter++;
