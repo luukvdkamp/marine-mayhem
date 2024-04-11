@@ -60,15 +60,19 @@ public class MovementSwitch : MonoBehaviour
             transform.Rotate(Vector3.left * mouseY);
 
             float upMovement = Input.GetAxis("Vertical") * speedThree * Time.deltaTime;
+            transform.Translate(transform.forward * upMovement, Space.World);
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                transform.Translate(-Vector3.down * upMovement * downSpeedThree * Time.deltaTime);
+                transform.Translate(Vector3.down * downSpeedThree * Time.deltaTime);
             }
 
-            else
+            else if(Input.GetKey(KeyCode.Space))
             {
-                transform.Translate(transform.forward * upMovement, Space.World);
+                transform.Translate(Vector3.up * downSpeedThree * Time.deltaTime);
             }
+
+           
 
             float sideMovement = Input.GetAxis("Horizontal");
             transform.Translate(transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
@@ -111,16 +115,18 @@ public class MovementSwitch : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             }
 
-            float upMovement = Input.GetAxis("Vertical");
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                transform.Translate(-Vector3.down * upMovement * verticalSpeed * Time.deltaTime);
+                transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
             }
 
-            else
+            else if(Input.GetKey(KeyCode.Space))
             {
-                transform.Translate(transform.forward * upMovement * horizontalSpeed * Time.deltaTime, Space.World);
+                transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
             }
+
+            float upMovement = Input.GetAxis("Vertical");
+            transform.Translate(transform.forward * upMovement * horizontalSpeed * Time.deltaTime, Space.World);
 
             float sideMovement = Input.GetAxis("Horizontal");
             transform.Translate(transform.right * sideMovement * horizontalSpeed * Time.deltaTime, Space.World);
