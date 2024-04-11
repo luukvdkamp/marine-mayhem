@@ -6,6 +6,7 @@ TagManager:
   tags:
   - gang
   - boss
+  - enemy
   layers:
   - Default
   - TransparentFX

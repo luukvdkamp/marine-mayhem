@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
         cooldownCounter += Time.deltaTime;
         if(Input.GetButtonDown("Fire1") && cooldownCounter > cooldown)
         {
-            GameObject prefabBullet = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject prefabBullet = Instantiate(bullet, transform.position, transform.localRotation);
             cooldownCounter = 0;
 
         }

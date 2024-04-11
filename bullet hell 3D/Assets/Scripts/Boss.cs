@@ -13,7 +13,6 @@ public class Boss : MonoBehaviour
         {
             door.GetComponent<AudioSource>().Play();
             door.GetComponent<Door>().opening = true;
-            Destroy(gameObject);
         }
     }
 }

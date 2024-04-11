@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public AudioSource bulletSpawn;
+    private GameObject prefabToDestroy;
 
     void Update()
     {
@@ -19,7 +20,33 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "boss")
         {
             collision.gameObject.GetComponent<Boss>().isHit = true;
-            Destroy(gameObject);
+            //collision.gameObject.GetComponent<AudioSource>().Play(); sound overneemt open deur sound
+            GetComponent<MeshRenderer>().enabled = false;
+            collision.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            prefabToDestroy = collision.gameObject;
+
+            Invoke("DestroyGameObject", 2f);
         }
+
+        else if (collision.gameObject.tag == "enemy")
+        {
+            collision.gameObject.GetComponent<AudioSource>().Play();
+            GetComponent<MeshRenderer>().enabled = false;
+            collision.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            prefabToDestroy = collision.gameObject;
+
+            Invoke("DestroyGameObject", 2f);
+        }
+
+        else if (collision.gameObject.tag == "Player")
+        {
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
+        }
+    }
+
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
+        Destroy(prefabToDestroy);
     }
 }
