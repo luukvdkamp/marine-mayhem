@@ -13,6 +13,8 @@ public class MovementSwitch : MonoBehaviour
 
     public GameObject submarine;
 
+    public ColliderStop colliderStop;
+
     [Header("3DMovement")]
     public float sensitivity = 100f;
     public GameObject threeD;
@@ -70,15 +72,16 @@ public class MovementSwitch : MonoBehaviour
                 transform.Translate(Vector3.down * downSpeedThree * Time.deltaTime);
             }
 
-            else if(Input.GetKey(KeyCode.Space))
+            else if (Input.GetKey(KeyCode.Space))
             {
                 transform.Translate(Vector3.up * downSpeedThree * Time.deltaTime);
             }
 
             //reset velocity when not moving
-            else if (upMovement == 0 && sideMovement == 0)
+            else if (upMovement == 0 && sideMovement == 0 && colliderStop.wasWithinDistance == false)
             {
                 GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                print("stopping");
             }
         }
 
@@ -136,9 +139,10 @@ public class MovementSwitch : MonoBehaviour
             }
 
             //reset velocity when not moving
-            else if (upMovement == 0 && sideMovement == 0)
+            else if (upMovement == 0 && sideMovement == 0 && colliderStop.wasWithinDistance == false)
             {
                 GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                print("movementstopping");
             }
         }
     }
@@ -148,7 +152,7 @@ public class MovementSwitch : MonoBehaviour
         if (other.gameObject.tag == "gang")
         {
             inGang = true;
-            print("working");
+            print("triggerworking");
         }
     }
 
@@ -160,5 +164,10 @@ public class MovementSwitch : MonoBehaviour
         }
     }
 
- 
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
+    }
+
+
 }

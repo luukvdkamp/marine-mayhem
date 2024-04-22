@@ -7,6 +7,7 @@ TagManager:
   - gang
   - boss
   - enemy
+  - collider
   layers:
   - Default
   - TransparentFX
