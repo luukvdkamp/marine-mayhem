@@ -62,6 +62,9 @@ public class MovementSwitch : MonoBehaviour
             float upMovement = Input.GetAxis("Vertical") * speedThree * Time.deltaTime;
             transform.Translate(transform.forward * upMovement, Space.World);
 
+            float sideMovement = Input.GetAxis("Horizontal");
+            transform.Translate(transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(Vector3.down * downSpeedThree * Time.deltaTime);
@@ -72,10 +75,11 @@ public class MovementSwitch : MonoBehaviour
                 transform.Translate(Vector3.up * downSpeedThree * Time.deltaTime);
             }
 
-           
-
-            float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(transform.right * sideMovement * speedThree * Time.deltaTime, Space.World);
+            //reset velocity when not moving
+            else if (upMovement == 0 && sideMovement == 0)
+            {
+                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            }
         }
 
         //2D
@@ -115,21 +119,27 @@ public class MovementSwitch : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             }
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
-            }
-
-            else if(Input.GetKey(KeyCode.Space))
-            {
-                transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
-            }
-
             float upMovement = Input.GetAxis("Vertical");
             transform.Translate(transform.forward * upMovement * horizontalSpeed * Time.deltaTime, Space.World);
 
             float sideMovement = Input.GetAxis("Horizontal");
             transform.Translate(transform.right * sideMovement * horizontalSpeed * Time.deltaTime, Space.World);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
+            }
+
+            else if (Input.GetKey(KeyCode.Space))
+            {
+                transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
+            }
+
+            //reset velocity when not moving
+            else if (upMovement == 0 && sideMovement == 0)
+            {
+                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            }
         }
     }
 
