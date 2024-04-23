@@ -39,11 +39,16 @@ public class Bullet : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
         }
+
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void DestroyGameObject()
     {
-        Destroy(gameObject);
         Destroy(prefabToDestroy);
+        Destroy(gameObject);
     }
 }
