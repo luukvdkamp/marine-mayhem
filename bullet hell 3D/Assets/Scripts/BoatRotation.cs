@@ -5,11 +5,12 @@ using UnityEngine;
 public class BoatRotation : MonoBehaviour
 {
     public float movementSpeed;
+    public Rigidbody r;
 
     void Update()
     {
         // Calculate movement direction
-        Vector3 movementDirection = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal")).normalized;
+        Vector3 movementDirection = r.velocity;
 
         // Rotate the empty object to face the movement direction
         if (movementDirection != Vector3.zero)

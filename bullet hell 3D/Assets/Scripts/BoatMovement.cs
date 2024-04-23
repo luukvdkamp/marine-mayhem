@@ -13,5 +13,10 @@ public class BoatMovement : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(-Vector3.forward * speed * verticalSpeed * Time.deltaTime);
 
         GetComponent<Rigidbody>().AddForce(-Vector3.right * speed * horizontalSpeed * Time.deltaTime);
+
+        if(horizontalSpeed == 0 && verticalSpeed == 0)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
 }
