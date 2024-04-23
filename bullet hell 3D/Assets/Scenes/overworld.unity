@@ -123,106 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &306825001
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 142.6
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.2101512
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8347076951000099471, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f2f25934db30c904a95d17441f059966, type: 2}
-    - target: {fileID: -243583251707154339, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cae93ea26f5c46b4bb2ffa02a3865433, type: 2}
-    - target: {fileID: 499642773139827587, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_Name
-      value: giant boat
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268014739111443274, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cae93ea26f5c46b4bb2ffa02a3865433, type: 2}
-    - target: {fileID: 4777208404569844575, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fc063354aec31be4f9cb353c8d25b61e, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f1ffc113ae5555b438e86082a5e5d4c6, type: 3}
---- !u!4 &306825002 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1ffc113ae5555b438e86082a5e5d4c6,
+--- !u!1 &167265011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0fe03872e73bd24bbea8053de0837a0,
     type: 3}
-  m_PrefabInstance: {fileID: 306825001}
+  m_PrefabInstance: {fileID: 1835555529}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &167265012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835555529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &167265013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167265011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954d4759f344e774abf1f1eae783f132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
 --- !u!1 &454317540
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,8 +373,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 306825002}
-  m_RootOrder: 4
+  m_Father: {fileID: 543450653401587906}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
 --- !u!114 &800894605
 MonoBehaviour:
@@ -609,19 +534,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 404.57172, z: 997.28973}
   m_Center: {x: 0, y: 152.28586, z: 109.30264}
---- !u!1 &1483013864 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1ffc113ae5555b438e86082a5e5d4c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 306825001}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1483013865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483013864}
+  m_GameObject: {fileID: 919132149461088888}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fec534d15ae602e4a88a87ac6fd4af31, type: 3}
@@ -634,7 +553,7 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483013864}
+  m_GameObject: {fileID: 919132149461088888}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -650,7 +569,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483013864}
+  m_GameObject: {fileID: 919132149461088888}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -895,3 +814,108 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &1835555529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 543450653401587906}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0fe03872e73bd24bbea8053de0837a0,
+        type: 3}
+      propertyPath: m_Name
+      value: giant boat overworld
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0fe03872e73bd24bbea8053de0837a0, type: 3}
+--- !u!4 &543450653401587906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149461088888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 142.6, y: 3.2101512, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 167265012}
+  - {fileID: 800894604}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919132149461088888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450653401587906}
+  - component: {fileID: 1483013866}
+  - component: {fileID: 1483013867}
+  - component: {fileID: 1483013865}
+  m_Layer: 0
+  m_Name: giant boat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
