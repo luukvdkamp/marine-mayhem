@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoatMovement : MonoBehaviour
 {
     public float speed;
+    public float slowDownDrag;
     void Update()
     {
         float horizontalSpeed = Input.GetAxis("Horizontal");
@@ -16,7 +17,12 @@ public class BoatMovement : MonoBehaviour
 
         if(horizontalSpeed == 0 && verticalSpeed == 0)
         {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().drag = slowDownDrag;
+        }
+
+        else
+        {
+            GetComponent<Rigidbody>().drag = 0;
         }
     }
 }

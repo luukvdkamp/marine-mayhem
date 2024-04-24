@@ -1476,6 +1476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10000
+  slowDownDrag: 10
 --- !u!54 &1483013866
 Rigidbody:
   m_ObjectHideFlags: 0
