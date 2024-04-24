@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
         resetCounter += Time.deltaTime;
 
-        if(hit && resetCounter > resetTime)
+        if(hit)
         {
             health -= 0.25f;
             textInt--;
@@ -40,7 +40,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "boss" || collision.gameObject.tag == "enemy")
         {
-            hit = true;
+            if(resetCounter > resetTime)
+            {
+                hit = true;
+            }
         }
     }
 }
