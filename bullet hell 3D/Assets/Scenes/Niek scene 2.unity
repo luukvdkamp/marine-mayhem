@@ -14740,7 +14740,7 @@ PrefabInstance:
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossName
-      value: Vis
+      value: mond vis
       objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
@@ -18274,7 +18274,7 @@ PrefabInstance:
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossName
-      value: Eel
+      value: vis meneer
       objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
