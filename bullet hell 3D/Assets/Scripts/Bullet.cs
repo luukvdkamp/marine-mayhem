@@ -5,8 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed;
-    public AudioSource bulletSpawn;
-    private GameObject prefabToDestroy;
     public int bulletDamage;
 
     void Update()
@@ -27,16 +25,13 @@ public class Bullet : MonoBehaviour
 
         else if (collision.gameObject.tag == "enemy")
         {
-            collision.gameObject.GetComponent<AudioSource>().Play();
-            GetComponent<MeshRenderer>().enabled = false;
-            collision.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            prefabToDestroy = collision.gameObject;
-
-            Invoke("DestroyGameObject", 2f);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
 
         else if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Ignoring collision with player.");
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
         }
 
@@ -44,11 +39,5 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void DestroyGameObject()
-    {
-        Destroy(prefabToDestroy);
-        Destroy(gameObject);
     }
 }
