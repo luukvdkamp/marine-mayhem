@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nieks scene.unity
     guid: 8cb6dee9910a67c4b977f1441b0454d1
+  - enabled: 1
+    path: Assets/Scenes/Niek scene 2.unity
+    guid: 84e0962e473abe54c80be9fdb3e9133a
   m_configObjects: {}

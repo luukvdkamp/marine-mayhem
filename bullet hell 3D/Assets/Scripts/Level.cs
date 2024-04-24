@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
     public float distance;
     public Transform boat;
     public GameObject text;
+    public int scene;
     void Update()
     {
         if(Vector3.Distance(transform.position, boat.position) < distance)
@@ -17,7 +18,7 @@ public class Level : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(scene);
             }
         }
 
