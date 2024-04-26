@@ -30616,6 +30616,11 @@ PrefabInstance:
       objectReference: {fileID: 399923417}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
       propertyPath: bossName
       value: Vis
       objectReference: {fileID: 0}
@@ -36776,6 +36781,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1802450435}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossName

@@ -6,6 +6,7 @@ using TMPro;
 
 public class Boss : MonoBehaviour
 {
+    public int health;
     public bool isHit; //when hit
     public bool playerInBossArea; //check if player is in boss area
 
@@ -50,6 +51,7 @@ public class Boss : MonoBehaviour
         {
             if(firstTimeEncounter == 0)
             {
+                healthSlider.maxValue = health;
                 healthSlider.value = healthSlider.maxValue;
                 bossNameText.text = bossName;
             }

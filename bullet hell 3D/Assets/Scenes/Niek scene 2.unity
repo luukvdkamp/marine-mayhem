@@ -15272,11 +15272,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 16.498844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 13.325337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 15.972127
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.2396717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.5530019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.24944544
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: spray
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1514787478}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: shootCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: sprayCooldown
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: amountOfBullets
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685024, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15287,6 +15337,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1642932352}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossName
@@ -19471,11 +19526,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 15.25878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 13.152947
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 15.777603
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.40773082
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.20778418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797640598398746844, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.68422794
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: spray
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1514787478}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: sprayCooldown
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: amountOfBullets
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685024, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19486,6 +19586,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1561640576}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossName
