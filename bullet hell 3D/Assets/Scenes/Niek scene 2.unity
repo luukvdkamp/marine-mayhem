@@ -308,7 +308,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!65 &7679930
@@ -810,7 +810,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!65 &133575777
@@ -11757,7 +11757,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &415428289
@@ -14736,7 +14736,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1079463133
@@ -15676,7 +15676,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1233970094
@@ -16123,7 +16123,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1316806505
@@ -16757,7 +16757,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!65 &1377844110
@@ -17185,7 +17185,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1478878971
@@ -17398,7 +17398,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1514787469
@@ -18027,7 +18027,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1561640576 stripped
@@ -19136,7 +19136,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!1 &1835937903
@@ -19377,7 +19377,7 @@ MonoBehaviour:
   minDashReset: 1
   maxDashReset: 5
   distanceBeforeAbleToDash: 4
-  dashSpeed: 7
+  dashSpeed: 2
   dashDistance: 0.5
   player: {fileID: 22091748}
 --- !u!65 &1859759571
