@@ -14804,6 +14804,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1514787478}
     - target: {fileID: 5513779959611685024, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18458,6 +18463,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1514787478}
     - target: {fileID: 5513779959611685024, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

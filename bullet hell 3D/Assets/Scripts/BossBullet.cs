@@ -9,7 +9,7 @@ public class BossBullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
         Destroy(gameObject, lifeTime);
     }
