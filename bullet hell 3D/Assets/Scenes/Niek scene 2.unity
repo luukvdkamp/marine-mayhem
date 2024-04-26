@@ -436,12 +436,12 @@ PrefabInstance:
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Size.x
-      value: 8.0239725
+      value: 6.6694293
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Center.x
-      value: 2.1569552
+      value: 2.8342268
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
@@ -15933,12 +15933,12 @@ PrefabInstance:
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Size.x
-      value: 8.392672
+      value: 6.3492317
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Center.x
-      value: 1.9726057
+      value: 2.9943256
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
@@ -16595,7 +16595,6 @@ GameObject:
   - component: {fileID: 1514787478}
   - component: {fileID: 1514787477}
   - component: {fileID: 1514787476}
-  - component: {fileID: 1514787475}
   - component: {fileID: 1514787474}
   - component: {fileID: 1514787473}
   - component: {fileID: 1514787472}
@@ -16603,6 +16602,7 @@ GameObject:
   - component: {fileID: 1514787470}
   - component: {fileID: 1514787479}
   - component: {fileID: 1514787480}
+  - component: {fileID: 1514787481}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -16617,14 +16617,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514787469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0744b4611ec30d547b8f1310064e54a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colliderTag: collider
   distanceThreshold: 1
-  pushForce: 1
+  pushForce: 0.2
   wasWithinDistance: 0
   pushDirection: {x: 0, y: 0, z: 0}
   movementSwitch: {fileID: 1514787474}
@@ -16700,19 +16700,6 @@ MonoBehaviour:
   minDistanceFromCenter: 70
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   inGang: 0
---- !u!65 &1514787475
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514787469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2.5}
-  m_Center: {x: 6.2794555e-16, y: 0, z: 0}
 --- !u!23 &1514787476
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16899,6 +16886,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &1514787481
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514787469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1545247729
 GameObject:
   m_ObjectHideFlags: 0

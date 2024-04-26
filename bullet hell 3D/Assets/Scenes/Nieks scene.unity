@@ -13535,12 +13535,12 @@ PrefabInstance:
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Size.x
-      value: 8.392672
+      value: 6.738535
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Center.x
-      value: 1.9726057
+      value: 2.799674
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
@@ -13636,7 +13636,6 @@ GameObject:
   - component: {fileID: 826286706}
   - component: {fileID: 826286705}
   - component: {fileID: 826286704}
-  - component: {fileID: 826286703}
   - component: {fileID: 826286707}
   - component: {fileID: 826286708}
   - component: {fileID: 826286709}
@@ -13644,6 +13643,7 @@ GameObject:
   - component: {fileID: 826286711}
   - component: {fileID: 826286713}
   - component: {fileID: 826286712}
+  - component: {fileID: 826286714}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -13651,19 +13651,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &826286703
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826286702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2.5}
-  m_Center: {x: 6.2794555e-16, y: 0, z: 0}
 --- !u!23 &826286704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13811,14 +13798,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826286702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0744b4611ec30d547b8f1310064e54a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colliderTag: collider
   distanceThreshold: 1
-  pushForce: 1
+  pushForce: 0.2
   wasWithinDistance: 0
   pushDirection: {x: 0, y: 0, z: 0}
   movementSwitch: {fileID: 826286707}
@@ -13940,6 +13927,19 @@ MonoBehaviour:
   ouch: {fileID: 826286712}
   dead: {fileID: 560066520}
   fadeDuration: 2
+--- !u!135 &826286714
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826286702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -28764,12 +28764,12 @@ PrefabInstance:
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Size.x
-      value: 8.0239725
+      value: 6.8002944
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
       propertyPath: m_Center.x
-      value: 2.1569552
+      value: 2.6723626
       objectReference: {fileID: 0}
     - target: {fileID: 7081512823237334283, guid: 0edf9b5b8b7d73d49a830f65d8f0ca09,
         type: 3}
