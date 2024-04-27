@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("GameOver")]
     public float fadeDuration; // Duration of the fade effect
     private float fadeTimer = 0f;
+    public bool noOxygen; //check oxygen code
 
     void Update()
     {
@@ -50,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
             hit = false;
         }
 
-        if (textInt <= 0)
+        if (textInt <= 0 || noOxygen)
         {
             StartCoroutine(DeathTransition());
         }
