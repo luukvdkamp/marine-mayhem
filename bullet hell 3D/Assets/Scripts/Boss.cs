@@ -18,6 +18,9 @@ public class Boss : MonoBehaviour
     public Slider healthSlider;
     public TextMeshProUGUI bossNameText;
 
+    public AudioFader fadeInMusic;
+    public AudioFader fadeOutMusic;
+
     //dont edit (bullet changes this value)
     public int bulletDamage;
 
@@ -37,8 +40,15 @@ public class Boss : MonoBehaviour
             //dead
             if (healthSlider.value == 0)
             {
+                bool hasTriggered = false;
                 door.GetComponent<AudioSource>().Play();
                 door.GetComponent<Door>().opening = true;
+                if (!hasTriggered)
+                {
+                    hasTriggered = true;
+                    fadeInMusic.Fade();
+                    fadeOutMusic.Fade();
+                }
                 Destroy(gameObject);
             }
         }
