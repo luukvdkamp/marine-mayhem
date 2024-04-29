@@ -11,6 +11,7 @@ public class BossAim : MonoBehaviour
     private float cooldownCounter;
 
     public GameObject bullet;
+    public float bulletSize;
     public Transform spawn;
 
     [Header("Spray (optional)")]
@@ -39,6 +40,7 @@ public class BossAim : MonoBehaviour
                 if (cooldownCounter > shootCooldown)
                 {
                     GameObject bulletPrefab = Instantiate(bullet, spawn.position, transform.localRotation);
+                    bulletPrefab.transform.localScale = new Vector3(bulletSize, bulletSize, bulletSize);
                     cooldownCounter = 0;
 
                 }
@@ -59,6 +61,7 @@ public class BossAim : MonoBehaviour
                     if(sprayTime > sprayCooldown)
                     {
                         GameObject bulletPrefab = Instantiate(bullet, spawn.position, transform.localRotation);
+                        bulletPrefab.transform.localScale = new Vector3(bulletSize, bulletSize, bulletSize);
                         sprayTime = 0;
                         bulletCounter++;
                     }

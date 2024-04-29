@@ -21,5 +21,10 @@ public class BossBullet : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().hit = true;
             Destroy(gameObject);
         }
+
+        else if(collision.gameObject.tag == "collider")
+        {
+            Destroy(gameObject);
+        }
     }
 }

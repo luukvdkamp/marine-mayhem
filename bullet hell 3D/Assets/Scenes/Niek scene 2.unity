@@ -15391,6 +15391,11 @@ PrefabInstance:
       objectReference: {fileID: 1514787478}
     - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
+      propertyPath: bulletSize
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
       propertyPath: shootCooldown
       value: 3
       objectReference: {fileID: 0}
@@ -19662,6 +19667,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1514787478}
+    - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: bulletSize
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4641194219982346941, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: sprayCooldown
