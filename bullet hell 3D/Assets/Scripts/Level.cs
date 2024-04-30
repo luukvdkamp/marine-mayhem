@@ -9,10 +9,19 @@ public class Level : MonoBehaviour
     public Transform boat;
     public GameObject text;
     public int scene;
+    bool soundPlayed = false;
+
+    public AudioSource popupSound;
     void Update()
     {
         if(Vector3.Distance(transform.position, boat.position) < distance)
         {
+            if (soundPlayed == false)
+            {
+                popupSound.Play();
+                soundPlayed = true;
+            }
+
             GetComponent<Image>().enabled = true;
             text.SetActive(true);
 
@@ -26,6 +35,7 @@ public class Level : MonoBehaviour
         {
             GetComponent<Image>().enabled = false;
             text.SetActive(false);
+            soundPlayed = false;
         }
     }
 }
