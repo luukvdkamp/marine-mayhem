@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
+using Random = UnityEngine.Random;
+
 public class AudioManager : MonoBehaviour
 {
     public SoundClip[] sounds;
@@ -62,6 +64,20 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
+        s.source.Play();
+    }
+
+    public void PlayClipWithRandomPitch(string name, float pitchMin = .9f, float pitchMax = 1.1f)
+    {
+        SoundClip s = Array.Find(sounds, sound => sound.clipName == name);
+
+        if (s == null)
+        {
+            Debug.LogError("Error, Couldn't find clip.");
+            return;
+        }
+
+        s.source.pitch = Random.Range(pitchMin, pitchMax);
         s.source.Play();
     }
 

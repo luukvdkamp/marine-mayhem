@@ -68,12 +68,11 @@ public class AudioFader : MonoBehaviour
 
         if(data.shouldFadeIn)
         {
-            data.currentValue = data.fadeIn;
+            data.clip.volume = data.fadeIn;
             AudioManager.instance.UpdateAudio(data.clip);
-        }
-        else
+        }else
         {
-            data.currentValue = data.fadeOut;
+            data.clip.volume = data.fadeOut;
             AudioManager.instance.UpdateAudio(data.clip);
         }
 

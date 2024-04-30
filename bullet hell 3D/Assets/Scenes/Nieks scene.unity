@@ -15906,6 +15906,8 @@ MonoBehaviour:
   deathImage: {fileID: 4646106918545364307}
   ouch: {fileID: 826286712}
   dead: {fileID: 560066520}
+  calm: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475, type: 2}
+  battle: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb, type: 2}
   fadeDuration: 4
   noOxygen: 0
 --- !u!135 &826286714

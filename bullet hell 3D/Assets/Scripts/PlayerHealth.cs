@@ -23,6 +23,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Audio")]
     public AudioSource ouch;
     public AudioSource dead;
+    [Space]
+    public SoundClip calm;
+    public SoundClip battle;
 
     [Header("GameOver")]
     public float fadeDuration; // Duration of the fade effect
@@ -78,6 +81,16 @@ public class PlayerHealth : MonoBehaviour
             float alpha = fadeTimer / fadeDuration;
             deathImage.color = new Color(0f, 0f, 0f, alpha);
             yield return null;
+        }
+
+        if(AudioManager.instance.SeekClip("Fight1").volume > 0)
+        {
+            AudioManager.instance.FadeClip(null, battle);
+        }
+
+        if(AudioManager.instance.SeekClip("Calm1").volume > 0)
+        {
+            AudioManager.instance.FadeClip(null, calm);
         }
 
         SceneManager.LoadScene(0);
