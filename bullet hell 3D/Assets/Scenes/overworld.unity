@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24873863, g: 0.33308524, b: 0.50950694, a: 1}
+  m_IndirectSpecularColor: {r: 0.24861759, g: 0.3330518, b: 0.5094482, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2333,8 +2333,8 @@ MonoBehaviour:
   text: {fileID: 1408260431}
   scene: 2
   popupSound: {fileID: 1330411534}
-  overworldMusic: {fileID: 0}
-  overworldWaves: {fileID: 0}
+  overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
+  overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}
 --- !u!114 &1330411531
 MonoBehaviour:
   m_ObjectHideFlags: 0
