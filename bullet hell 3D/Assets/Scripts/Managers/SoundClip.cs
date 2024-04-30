@@ -16,4 +16,6 @@ public class SoundClip : ScriptableObject
     [Space]
     public bool loop;
     public bool playOnAwake;
+
+    [HideInInspector] public float originalVolume = 0f;
 }

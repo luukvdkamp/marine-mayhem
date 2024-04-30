@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007020957, g: 0.006023313, b: 0.031616352, a: 1}
+  m_IndirectSpecularColor: {r: 0.007020967, g: 0.0060233134, b: 0.031616338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6830,6 +6830,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222025883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &247274082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247274083}
+  - component: {fileID: 247274084}
+  m_Layer: 0
+  m_Name: DONT DELETE THIS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247274083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247274082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.443798, y: 2.2819772, z: -0.5216455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247274084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247274082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d73923078f6f82409d0a784e6837e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 11400000, guid: 63389419304691e4990f6193c779f475, type: 2}
+  - {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb, type: 2}
 --- !u!1 &252677472
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,78 +7477,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298156125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &299337609
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299337611}
-  - component: {fileID: 299337610}
-  m_Layer: 0
-  m_Name: MusicFadeIn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &299337610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299337609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7bc502c44036942901f9d5915f9d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 11400000, guid: b5c7fd02b3b86074faf46a3b50fb3d56, type: 2}
-  tempToggle: 0
-  fadeIn: 1
-  fadeDuration: 2
-  fadeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &299337611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299337609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 419.46323, y: 247.39854, z: -9.333049}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307283786
 GameObject:
   m_ObjectHideFlags: 0
@@ -27546,14 +27521,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885330140}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a5056b50d71c0c4e848b7abc4b542ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 11400000, guid: b5c7fd02b3b86074faf46a3b50fb3d56, type: 2}
-  - {fileID: 11400000, guid: 7b685e8261250ab4d8ed5ded9316b2c9, type: 2}
+  - {fileID: 11400000, guid: 63389419304691e4990f6193c779f475, type: 2}
+  - {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb, type: 2}
 --- !u!4 &1885330142
 Transform:
   m_ObjectHideFlags: 0
@@ -27567,7 +27542,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909290295
 GameObject:
@@ -28659,9 +28634,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
+      propertyPath: BossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: bossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: calmMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
       propertyPath: fadeInMusic
       value: 
-      objectReference: {fileID: 2043742654}
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossNameText
@@ -28671,7 +28665,8 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeOutMusic
       value: 
-      objectReference: {fileID: 299337610}
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: healthSlider
@@ -29254,78 +29249,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040905239}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2043742653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2043742655}
-  - component: {fileID: 2043742654}
-  m_Layer: 0
-  m_Name: MusicFadeOut
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2043742654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043742653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7bc502c44036942901f9d5915f9d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 11400000, guid: 7b685e8261250ab4d8ed5ded9316b2c9, type: 2}
-  tempToggle: 0
-  fadeIn: 0
-  fadeDuration: 2
-  fadeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &2043742655
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043742653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 419.46323, y: 247.39854, z: -9.333049}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2059292705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4646106917916099955, guid: 0a96b239e7f75484ea5124b10fa7336e,
@@ -34826,6 +34749,11 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 826286713}
+    - target: {fileID: 6946353295026031883, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -41.244873
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a96b239e7f75484ea5124b10fa7336e, type: 3}
 --- !u!114 &4646106918545364307 stripped
@@ -34874,9 +34802,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
+      propertyPath: BossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: bossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: calmMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
       propertyPath: fadeInMusic
       value: 
-      objectReference: {fileID: 2043742654}
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossNameText
@@ -34886,7 +34833,8 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeOutMusic
       value: 
-      objectReference: {fileID: 299337610}
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: healthSlider

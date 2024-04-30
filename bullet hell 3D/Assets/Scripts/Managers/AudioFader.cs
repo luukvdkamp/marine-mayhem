@@ -4,60 +4,56 @@ using UnityEngine;
 
 public class AudioFader : MonoBehaviour
 {
-    public SoundClip clip;
-    [Tooltip("This is a temporary toggle to be replaced by a trigger event")]public bool tempToggle;
-    [Tooltip("If toggled audio will fade in instead of fade out")]public bool fadeIn;
-
-    [Tooltip("The duration of the fade. Example: if the value is 1 it will take 1 second to fade out")] public float fadeDuration;
-
     public AnimationCurve fadeCurve = AnimationCurve.Linear(0, 0, 1, 1);
 
-    float s_FadeOut = 0.0f;
-    float s_FadeIn = 1.0f;
-
-    float s_OriginalValue;
-    float s_CurrentValue;
-
-    private void Start()
-    {
-        s_OriginalValue = clip.volume;
-        s_CurrentValue = s_OriginalValue;
-    }
+    List<FadeData> s_FadeQueue = new List<FadeData>();
+    float s_FadeDuration;
 
     private void Update()
     {
-        if(tempToggle)
+        if(s_FadeQueue.Count > 0)
         {
-            tempToggle = false;
-            Fade();
+            for (int i = 0; i < s_FadeQueue.Count; i++)
+            {
+                s_FadeQueue[i].clip.volume = s_FadeQueue[i].currentValue;
+                AudioManager.instance.UpdateAudio(s_FadeQueue[i].clip);
+            }
+        }
+    }
+
+    public void Fade(SoundClip clipToFadeIn, SoundClip clipToFadeOut, float fadeDuration = 2, float fadeOutLevelOverride = 0)
+    {
+        s_FadeDuration = fadeDuration;
+
+        s_FadeQueue.Clear();
+
+        s_FadeQueue.Add(new FadeData(clipToFadeIn, clipToFadeIn.originalVolume, 0, true));
+        s_FadeQueue.Add(new FadeData(clipToFadeOut, clipToFadeOut.originalVolume, fadeOutLevelOverride, false));
+
+        for (int i = 0; i < s_FadeQueue.Count; i++)
+        {
+            StartCoroutine(FadeValue(s_FadeQueue[i]));
         }
 
-        clip.volume = s_CurrentValue;
-        AudioManager.instance.UpdateAudio(clip);
+        //StartCoroutine(FadeValue());
     }
 
-    public void Fade()
-    {
-        StartCoroutine(FadeValue());
-    }
-
-    IEnumerator FadeValue()
+    IEnumerator FadeValue(FadeData data)
     {
         float s_Time = 0.0f;
 
-        while(s_Time < fadeDuration)
+        while(s_Time < s_FadeDuration)
         {
-            if(fadeIn)
+            if(data.shouldFadeIn)
             {
-                float progress = s_Time / fadeDuration;
-                s_CurrentValue = Mathf.Lerp(s_FadeOut, s_FadeIn, fadeCurve.Evaluate(progress));
+                float progress = s_Time / s_FadeDuration;
+                data.currentValue = Mathf.Lerp(data.fadeOut, data.fadeIn, fadeCurve.Evaluate(progress));
 
                 s_Time += Time.deltaTime;
-            }
-            else
+            }else
             {
-                float progress = s_Time / fadeDuration;
-                s_CurrentValue = Mathf.Lerp(s_FadeIn, s_FadeOut, fadeCurve.Evaluate(progress));
+                float progress = s_Time / s_FadeDuration;
+                data.currentValue = Mathf.Lerp(data.fadeIn, data.fadeOut, fadeCurve.Evaluate(progress));
 
                 s_Time += Time.deltaTime;
             }
@@ -65,12 +61,36 @@ public class AudioFader : MonoBehaviour
             yield return null;
         }
 
-        if(fadeIn)
+        if(data.shouldFadeIn)
         {
-            s_CurrentValue = s_FadeIn;
-        }else
-        {
-            s_CurrentValue = s_FadeOut;
+            data.currentValue = data.fadeIn;
+            AudioManager.instance.UpdateAudio(data.clip);
         }
+        else
+        {
+            data.currentValue = data.fadeOut;
+            AudioManager.instance.UpdateAudio(data.clip);
+        }
+
+        Destroy(this);
+    }
+}
+
+public class FadeData
+{
+    public SoundClip clip;
+
+    [Tooltip("The volume level the manager should move towards when fading in. This should be equal to the original volume level of the SoundClip")]public float fadeIn;
+    [Tooltip("The volume level the manager should move towards when fading out. This value should be 0 unless you want to keep hearing the audio")] public float fadeOut;
+    [Tooltip("The value the fade in is currently on")]public float currentValue;
+
+    [Tooltip("If toggeled the manager will fade the audio in instead of out")]public bool shouldFadeIn;
+
+    public FadeData(SoundClip s_Clip, float s_FadeIn, float s_FadeOut, bool s_ShouldFadeIn)
+    {
+        clip = s_Clip;
+        fadeIn = s_FadeIn;
+        fadeOut = s_FadeOut;
+        shouldFadeIn = s_ShouldFadeIn;
     }
 }

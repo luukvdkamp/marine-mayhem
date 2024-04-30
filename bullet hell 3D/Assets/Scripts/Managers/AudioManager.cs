@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
         foreach (SoundClip s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            s.originalVolume = s.volume;
             s.source.clip = s.clip;
             s.source.outputAudioMixerGroup = s.group;
 
@@ -69,6 +70,12 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.Stop();
+    }
+
+    public void FadeClip(SoundClip fadeInClip, SoundClip fadeOutClip)
+    {
+        AudioFader fader = gameObject.AddComponent<AudioFader>();
+        fader.Fade(fadeInClip, fadeOutClip);
     }
 
     public SoundClip SeekClip(string name)
