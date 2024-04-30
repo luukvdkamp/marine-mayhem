@@ -16,8 +16,8 @@ MonoBehaviour:
   clipName: Fight1
   clip: {fileID: 8300000, guid: 972c5b939809be3458c908625567be2e, type: 3}
   group: {fileID: -1584423900727139758, guid: d69a03dfc15cff74eb01e2658bc27698, type: 2}
-  volume: 1
+  volume: 0.9998783
   pitch: 1
   loop: 1
   playOnAwake: 1
-  originalVolume: 1
+  originalVolume: 0.9998783

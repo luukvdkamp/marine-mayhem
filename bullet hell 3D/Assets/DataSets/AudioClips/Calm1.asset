@@ -16,8 +16,8 @@ MonoBehaviour:
   clipName: Calm1
   clip: {fileID: 8300000, guid: da808cd8a4d58ae49b4833cc62f9e91c, type: 3}
   group: {fileID: -1584423900727139758, guid: d69a03dfc15cff74eb01e2658bc27698, type: 2}
-  volume: 1
+  volume: 0.000121712685
   pitch: 1
   loop: 1
   playOnAwake: 1
-  originalVolume: 1
+  originalVolume: 0.000121712685
