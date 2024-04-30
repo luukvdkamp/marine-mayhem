@@ -12,6 +12,10 @@ public class Level : MonoBehaviour
     bool soundPlayed = false;
 
     public AudioSource popupSound;
+
+    public SoundClip overworldMusic;
+    public SoundClip overworldWaves;
+
     void Update()
     {
         if(Vector3.Distance(transform.position, boat.position) < distance)
@@ -27,6 +31,9 @@ public class Level : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                AudioManager.instance.FadeClip(null, overworldMusic);
+                AudioManager.instance.FadeClip(null, overworldWaves);
+
                 SceneManager.LoadScene(scene);
             }
         }

@@ -6,7 +6,7 @@ using UnityEditor;
 
 
 [ExecuteInEditMode]
-public class ChangeScriptableObjectsBack : MonoBehaviour
+public class EditorExitEvents : MonoBehaviour
 {
     public SoundClip[] clips;
 

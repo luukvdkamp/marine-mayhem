@@ -21,21 +21,26 @@ public class AudioFader : MonoBehaviour
         }
     }
 
-    public void Fade(SoundClip clipToFadeIn, SoundClip clipToFadeOut, float fadeDuration = 2, float fadeOutLevelOverride = 0)
+    public void Fade(SoundClip clipToFadeIn, SoundClip clipToFadeOut, float fadeDuration = 2)
     {
         s_FadeDuration = fadeDuration;
 
         s_FadeQueue.Clear();
 
-        s_FadeQueue.Add(new FadeData(clipToFadeIn, clipToFadeIn.originalVolume, 0, true));
-        s_FadeQueue.Add(new FadeData(clipToFadeOut, clipToFadeOut.originalVolume, fadeOutLevelOverride, false));
+        if(clipToFadeIn != null )
+        {
+            s_FadeQueue.Add(new FadeData(clipToFadeIn, clipToFadeIn.originalVolume, 0, true));
+        }
+        
+        if(clipToFadeOut != null )
+        {
+            s_FadeQueue.Add(new FadeData(clipToFadeOut, clipToFadeOut.originalVolume, 0, false));
+        }
 
         for (int i = 0; i < s_FadeQueue.Count; i++)
         {
             StartCoroutine(FadeValue(s_FadeQueue[i]));
         }
-
-        //StartCoroutine(FadeValue());
     }
 
     IEnumerator FadeValue(FadeData data)

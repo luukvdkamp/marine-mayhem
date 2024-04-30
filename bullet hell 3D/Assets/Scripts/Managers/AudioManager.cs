@@ -29,6 +29,11 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.clip;
             s.source.outputAudioMixerGroup = s.group;
 
+            if (s.startSilent)
+            {
+                s.volume = 0;
+            }
+
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
@@ -39,6 +44,7 @@ public class AudioManager : MonoBehaviour
                 s.source.Play();
             }
         }
+
     }
 
     public void UpdateAudio(SoundClip clip)
@@ -72,7 +78,7 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
-    public void FadeClip(SoundClip fadeInClip, SoundClip fadeOutClip)
+    public void FadeClip(SoundClip fadeInClip = null, SoundClip fadeOutClip = null)
     {
         AudioFader fader = gameObject.AddComponent<AudioFader>();
         fader.Fade(fadeInClip, fadeOutClip);

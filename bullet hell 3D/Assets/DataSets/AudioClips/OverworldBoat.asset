@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d4e8c74b3b86d6459c1f2eaa8e91249, type: 3}
-  m_Name: Calm1
+  m_Name: OverworldBoat
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  clipName: Calm1
-  clip: {fileID: 8300000, guid: da808cd8a4d58ae49b4833cc62f9e91c, type: 3}
+  clipName: OverworldBoat
+  clip: {fileID: 8300000, guid: cfaa1dd878f93af43bbef53e553f9207, type: 3}
   group: {fileID: -1584423900727139758, guid: d69a03dfc15cff74eb01e2658bc27698, type: 2}
   volume: 1
   pitch: 1

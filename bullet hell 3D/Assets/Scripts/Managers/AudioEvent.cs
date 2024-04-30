@@ -10,22 +10,9 @@ public class AudioEvent : MonoBehaviour
     public float fadeTimeOverride = 2;
     public float fadeOutOverride = 0;
 
-    public bool initializeFade;
-
     private void Start()
     {
         AudioFader fader = gameObject.AddComponent<AudioFader>();
-        fader.Fade(fadeInClip, fadeOutClip, fadeTimeOverride, fadeOutOverride);
-    }
-
-    private void Update()
-    {
-        if(initializeFade)
-        {
-            initializeFade = false;
-
-            AudioFader fader = gameObject.AddComponent<AudioFader>();
-            fader.Fade(fadeInClip, fadeOutClip, fadeTimeOverride, fadeOutOverride);
-        }
+        fader.Fade(fadeInClip, fadeOutClip, fadeTimeOverride);
     }
 }
