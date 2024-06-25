@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public int bulletDamage;
+    public GameObject explosionParticle;
 
     void Update()
     {
@@ -20,12 +21,18 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<Boss>().isHit = true;
             collision.gameObject.GetComponent<Boss>().bulletDamage = bulletDamage;
+
+            //explosion particle
+            GameObject explosionPrefab = Instantiate(explosionParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
         else if (collision.gameObject.tag == "enemy")
         {
             Destroy(collision.gameObject);
+
+            //explosion particle
+            GameObject explosionPrefab = Instantiate(explosionParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
@@ -37,6 +44,8 @@ public class Bullet : MonoBehaviour
 
         else
         {
+            //explosion particle
+            GameObject explosionPrefab = Instantiate(explosionParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

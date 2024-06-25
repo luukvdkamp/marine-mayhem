@@ -114,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   bulletDamage: 1
+  explosionParticle: {fileID: 3875874975969439467, guid: fda7477f63281e34d9a009f6e36611ef,
+    type: 3}
 --- !u!54 &-4244145490346678378
 Rigidbody:
   m_ObjectHideFlags: 0
