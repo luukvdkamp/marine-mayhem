@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d7a1a6d4985b2428234717db26fac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  calmMusic: {fileID: 0}
 --- !u!65 &94994275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14099,6 +14100,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
+      propertyPath: bossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: calmMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
       propertyPath: bossNameText
       value: 
       objectReference: {fileID: 1801399483}
@@ -15914,6 +15927,8 @@ MonoBehaviour:
   deathImage: {fileID: 1801399486}
   ouch: {fileID: 1514787480}
   dead: {fileID: 0}
+  calm: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475, type: 2}
+  battle: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb, type: 2}
   fadeDuration: 2
   noOxygen: 0
 --- !u!82 &1514787480
@@ -17050,6 +17065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4646106918098527684, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4646106918105877624, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_Name
@@ -17195,6 +17215,16 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1514787479}
+    - target: {fileID: 5684712569163831977, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496997198205291916, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a96b239e7f75484ea5124b10fa7336e, type: 3}
 --- !u!114 &1801399483 stripped
@@ -17749,6 +17779,18 @@ PrefabInstance:
       propertyPath: bossName
       value: vis meneer
       objectReference: {fileID: 0}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: bossMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: e10ec9b25ae243042baeedaec0e0c1eb,
+        type: 2}
+    - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
+        type: 3}
+      propertyPath: calmMusic
+      value: 
+      objectReference: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475,
+        type: 2}
     - target: {fileID: 5513779959611685026, guid: ce5b48d8e71ef714aae180fd4448a490,
         type: 3}
       propertyPath: bossNameText
