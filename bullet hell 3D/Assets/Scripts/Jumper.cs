@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jumper : MonoBehaviour
 {
     public float jumpHeight = 2f;
-    public float jumpSpeed = 5f;
+    public float jumpDuration = 1f; // Total time to complete the jump (up and down)
 
     private Vector3 startPosition;
     private bool isJumping = false;
@@ -28,7 +28,6 @@ public class Jumper : MonoBehaviour
         {
             Jump();
             jumpCounter = jumpTime; //reset jump timer
-
             jumpDirt.Play();
         }
     }
@@ -36,31 +35,21 @@ public class Jumper : MonoBehaviour
     void Jump()
     {
         isJumping = true;
-        Vector3 targetPosition = startPosition + Vector3.up * jumpHeight;
-        StartCoroutine(JumpRoutine(targetPosition));
+        StartCoroutine(JumpRoutine());
     }
 
-    IEnumerator JumpRoutine(Vector3 targetPosition)
+    IEnumerator JumpRoutine()
     {
+        float gravity = 2 * jumpHeight / (jumpDuration / 2 * jumpDuration / 2);
+        float initialVelocity = gravity * (jumpDuration / 2);
         float startTime = Time.time;
-        Vector3 startPosition = transform.position;
 
-        while (Time.time < startTime + jumpSpeed)
+        while (Time.time < startTime + jumpDuration)
         {
-            float t = (Time.time - startTime) / jumpSpeed;
-            transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-            yield return null;
-        }
-
-        transform.position = targetPosition;
-        yield return new WaitForSeconds(0.1f);
-
-        //jump back to the ground
-        startTime = Time.time;
-        while (Time.time < startTime + jumpSpeed)
-        {
-            float t = (Time.time - startTime) / jumpSpeed;
-            transform.position = Vector3.Lerp(targetPosition, startPosition, t);
+            float elapsed = Time.time - startTime;
+            float t = elapsed < jumpDuration / 2 ? elapsed : jumpDuration - elapsed;
+            float y = initialVelocity * t - 0.5f * gravity * t * t;
+            transform.position = startPosition + Vector3.up * y;
             yield return null;
         }
 

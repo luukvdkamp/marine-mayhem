@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ef2aa1788beb094290ac98e573c1b84,
         type: 3}
       propertyPath: m_Name
-      value: molFBX
+      value: molFBX Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7ef2aa1788beb094290ac98e573c1b84,
         type: 3}
@@ -225,3 +225,37 @@ MonoBehaviour:
   jumpHeight: 1
   jumpSpeed: 0.5
   jumpTime: 2
+  jumpDirt: {fileID: 0}
+  jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.500417
+      value: 0.99960697
+      inSlope: 1.499874
+      outSlope: 1.499874
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.0032997131
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
