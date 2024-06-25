@@ -12,6 +12,8 @@ public class Jumper : MonoBehaviour
     private float jumpCounter;
     public float jumpTime;
 
+    public ParticleSystem jumpDirt;
+
     void Start()
     {
         startPosition = transform.position;
@@ -26,6 +28,8 @@ public class Jumper : MonoBehaviour
         {
             Jump();
             jumpCounter = jumpTime; //reset jump timer
+
+            jumpDirt.Play();
         }
     }
 

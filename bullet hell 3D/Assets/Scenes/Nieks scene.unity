@@ -358,6 +358,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1454746981}
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -733,6 +743,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8812752659221723141, guid: dc09bc8447e74c34990205d3599cdd49,
     type: 3}
   m_PrefabInstance: {fileID: 564537829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &156722769 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875280961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &169043657
 GameObject:
@@ -5571,6 +5587,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1220256204}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -5879,6 +5900,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264604460}
   m_Mesh: {fileID: -5495902117074765545, guid: 15592454f8623074e9dc2be1fe11c1d8, type: 3}
+--- !u!198 &267472996 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675686313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269895085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6024,6 +6051,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 2}
   m_Center: {x: 0, y: 0.04952252, z: 0.0012432691}
+--- !u!198 &286548370 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1713114148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &291349825
 GameObject:
   m_ObjectHideFlags: 0
@@ -12092,6 +12125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1840287578}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -12237,6 +12275,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527147601}
   m_Mesh: {fileID: 4711208715938537054, guid: 15592454f8623074e9dc2be1fe11c1d8, type: 3}
+--- !u!198 &555230659 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1967018465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &560066518
 GameObject:
   m_ObjectHideFlags: 0
@@ -12373,6 +12417,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 912500832}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -12441,6 +12490,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4646106918545364306}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &591654918 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1025730602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &606255355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12448,6 +12503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1522105825}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -12529,6 +12589,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 2038468178}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -13524,6 +13589,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 2088217419}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -14452,6 +14522,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900155612}
   m_Mesh: {fileID: 4711208715938537054, guid: 15592454f8623074e9dc2be1fe11c1d8, type: 3}
+--- !u!198 &912500832 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 936282653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &914568027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14459,6 +14535,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5921083215187361887, guid: b1db36e2288ea4a4d89c8c278397d629,
         type: 3}
       propertyPath: m_Name
@@ -15515,6 +15601,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1951964301}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -15855,6 +15946,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211809243}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &1220256204 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 305339009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264408504
 GameObject:
   m_ObjectHideFlags: 0
@@ -17169,6 +17266,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424671167}
   m_Mesh: {fileID: 4711208715938537054, guid: 15592454f8623074e9dc2be1fe11c1d8, type: 3}
+--- !u!198 &1435082525 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1552083928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444422378
 GameObject:
   m_ObjectHideFlags: 0
@@ -17267,6 +17370,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444422378}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &1454746981 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 813200476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455924366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17555,6 +17664,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1688159947}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -17617,6 +17731,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc09bc8447e74c34990205d3599cdd49, type: 3}
+--- !u!198 &1522105825 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675374515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1552083928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17711,6 +17831,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 267472996}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -23204,6 +23329,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!198 &1688159947 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 914568027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1696114943
 GameObject:
   m_ObjectHideFlags: 0
@@ -23902,6 +24033,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 156722769}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -24392,6 +24528,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835190583}
   m_Mesh: {fileID: -5495902117074765545, guid: 15592454f8623074e9dc2be1fe11c1d8, type: 3}
+--- !u!198 &1840287578 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941084949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1873775964
 GameObject:
   m_ObjectHideFlags: 0
@@ -25199,6 +25341,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 2}
   m_Center: {x: 0, y: 0.04952252, z: 0.0012432691}
+--- !u!198 &1951964301 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 941978256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1967018465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25643,6 +25791,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 1435082525}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -25705,6 +25858,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc09bc8447e74c34990205d3599cdd49, type: 3}
+--- !u!198 &2038468178 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 353916288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2040905239
 GameObject:
   m_ObjectHideFlags: 0
@@ -30666,6 +30825,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!198 &2088217419 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1323255315910458704, guid: b1db36e2288ea4a4d89c8c278397d629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1896977203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2101621554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30673,6 +30838,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 555230659}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -30742,6 +30912,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 286548370}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
@@ -30906,6 +31081,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909290296}
     m_Modifications:
+    - target: {fileID: 5254789065527250278, guid: dc09bc8447e74c34990205d3599cdd49,
+        type: 3}
+      propertyPath: jumpDirt
+      value: 
+      objectReference: {fileID: 591654918}
     - target: {fileID: 8144477860983890623, guid: dc09bc8447e74c34990205d3599cdd49,
         type: 3}
       propertyPath: m_Name
