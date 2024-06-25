@@ -18,6 +18,8 @@ public class DashEnemy : MonoBehaviour
 
     private bool ableToDash;
 
+    public GameObject redPuf;
+
     private void Start()
     {
         dashResetTime = Random.Range(minDashReset, maxDashReset);
@@ -46,6 +48,9 @@ public class DashEnemy : MonoBehaviour
                 resetCounter = 0;
                 dashResetTime = Random.Range(minDashReset, maxDashReset);
                 StartCoroutine(DashTowardsPlayer());
+
+                //activate spikes
+                redPuf.SetActive(true);
             }
         }
     }
@@ -68,5 +73,8 @@ public class DashEnemy : MonoBehaviour
 
         // Reset ableToDash
         ableToDash = false;
+
+        //disable spikes
+        redPuf.SetActive(false);
     }
 }

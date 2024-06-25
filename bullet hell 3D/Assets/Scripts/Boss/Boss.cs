@@ -52,7 +52,7 @@ public class Boss : MonoBehaviour
                 door.GetComponent<AudioSource>().Play();
                 door.GetComponent<Door>().opening = true;
 
-                AudioManager.instance.FadeClip(calmMusic, bossMusic);
+                //AudioManager.instance.FadeClip(calmMusic, bossMusic);
 
                 Destroy(gameObject);
             }
