@@ -32,4 +32,23 @@ public class EnemyBullet : MonoBehaviour
             Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerHealth>().hit = true;
+            Destroy(gameObject);
+        }
+
+        else if (other.gameObject.tag == "collider")
+        {
+            Destroy(gameObject);
+        }
+
+        else if (other.gameObject.tag == "enemy")
+        {
+            Physics.IgnoreCollision(GetComponent<Collider>(), other.gameObject.GetComponent<Collider>());
+        }
+    }
 }

@@ -14,12 +14,19 @@ public class Stalker : MonoBehaviour
     public bool escaping;
 
     public GameObject bullet;
-    public float shootResetTime;
+    public float minShootResetTime;
+    public float maxShootResetTime;
+    private float shootResetTime;
+
     private float shootResetCounter;
+
+    public AudioSource shootingSound;
 
     private void Start()
     {
         player = GameObject.Find("player");
+
+        shootResetTime = Random.Range(minShootResetTime, maxShootResetTime);
     }
 
     void Update()
@@ -65,8 +72,11 @@ public class Stalker : MonoBehaviour
         if(shootResetCounter > shootResetTime)
         {
             //able to fire
+            shootingSound.Play();
+
             GameObject bulletPrefab = Instantiate(bullet, transform.position, transform.rotation);
             shootResetCounter = 0;
+            shootResetTime = Random.Range(minShootResetTime, maxShootResetTime);
         }
 
         //look at player
