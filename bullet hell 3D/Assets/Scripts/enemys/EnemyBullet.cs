@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
@@ -25,6 +25,11 @@ public class BossBullet : MonoBehaviour
         else if(collision.gameObject.tag == "collider")
         {
             Destroy(gameObject);
+        }
+
+        else if (collision.gameObject.tag == "enemy")
+        {
+            Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
         }
     }
 }
