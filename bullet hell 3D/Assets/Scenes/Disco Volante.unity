@@ -4830,6 +4830,7 @@ MonoBehaviour:
   cdthree: {fileID: 235224071}
   submarine: {fileID: 470135585}
   colliderStop: {fileID: 631655739}
+  crosshair: {fileID: 1541816287}
   sensitivity: 300
   threeD: {fileID: 235224071}
   downSpeedThree: 4
@@ -9562,6 +9563,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a96b239e7f75484ea5124b10fa7336e, type: 3}
+--- !u!1 &1541816287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8466351725084608282, guid: 0a96b239e7f75484ea5124b10fa7336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1541816286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1564156498
 GameObject:
   m_ObjectHideFlags: 0

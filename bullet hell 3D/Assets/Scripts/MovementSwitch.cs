@@ -15,6 +15,8 @@ public class MovementSwitch : MonoBehaviour
 
     public ColliderStop colliderStop;
 
+    public GameObject crosshair;
+
     [Header("3DMovement")]
     public float sensitivity = 100f;
     public GameObject threeD;
@@ -47,6 +49,7 @@ public class MovementSwitch : MonoBehaviour
         //3D
         if(inGang == false)
         {
+            crosshair.SetActive(true);
             cdtwo.SetActive(false);
             cdthree.SetActive(true);
             submarine.SetActive(false);
@@ -88,6 +91,7 @@ public class MovementSwitch : MonoBehaviour
         //2D
         else
         {
+            crosshair.SetActive(false);
             cdtwo.SetActive(true);
             cdthree.SetActive(false);
             submarine.SetActive(true);

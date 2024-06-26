@@ -6028,6 +6028,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &349924866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8466351725084608282, guid: 0a96b239e7f75484ea5124b10fa7336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801399482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &356932562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 177192729986015, guid: 756c60e55e5f18c44bcdf080cc4f5be8,
@@ -14191,6 +14197,7 @@ MonoBehaviour:
   cdthree: {fileID: 334011918}
   submarine: {fileID: 22091747}
   colliderStop: {fileID: 1514787470}
+  crosshair: {fileID: 349924866}
   sensitivity: 300
   threeD: {fileID: 334011918}
   downSpeedThree: 4
