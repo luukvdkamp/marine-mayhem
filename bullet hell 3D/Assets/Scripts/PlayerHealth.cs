@@ -85,6 +85,7 @@ public class PlayerHealth : MonoBehaviour
             yield return null;
         }
 
+        
         if(AudioManager.instance.SeekClip("Fight1").volume > 0)
         {
             AudioManager.instance.FadeClip(null, battle);
