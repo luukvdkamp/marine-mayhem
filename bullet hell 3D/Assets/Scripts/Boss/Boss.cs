@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour
     //dont edit (bullet changes this value)
     public int bulletDamage;
 
-    private int firstTimeEncounter; //checks if its the first encounter of boss (resets health bar of previous boss)
+    public int firstTimeEncounter; //checks if its the first encounter of boss (resets health bar of previous boss)
 
     void Update()
     {
@@ -59,32 +59,6 @@ public class Boss : MonoBehaviour
             }
         }
         
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            if(firstTimeEncounter == 0)
-            {
-                healthSlider.maxValue = health;
-                healthSlider.value = healthSlider.maxValue;
-                bossNameText.text = bossName;
-            }
-
-            firstTimeEncounter++;
-            bossHealthCanvas.SetActive(true);
-            playerInBossArea = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            bossHealthCanvas.SetActive(false);
-            playerInBossArea = false;
-        }
     }
 }
 
