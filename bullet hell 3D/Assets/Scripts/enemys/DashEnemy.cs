@@ -14,7 +14,7 @@ public class DashEnemy : MonoBehaviour
     public float dashSpeed;
     public float dashDistance;
 
-    public Transform player;
+    public GameObject player;
 
     private bool ableToDash;
 
@@ -23,13 +23,17 @@ public class DashEnemy : MonoBehaviour
     private void Start()
     {
         dashResetTime = Random.Range(minDashReset, maxDashReset);
-        player = GameObject.Find("Player").transform;
     }
 
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+        }
+
         // Check if the player is within the dash range
-        if (Vector3.Distance(transform.position, player.position) < distanceBeforeAbleToDash)
+        if (Vector3.Distance(transform.position, player.transform.position) < distanceBeforeAbleToDash)
         {
             ableToDash = true;
         }
@@ -59,7 +63,7 @@ public class DashEnemy : MonoBehaviour
     IEnumerator DashTowardsPlayer()
     {
         // Calculate the direction to dash towards
-        Vector3 dashDirection = (player.position - transform.position).normalized;
+        Vector3 dashDirection = (player.transform.position - transform.position).normalized;
 
         // Calculate the destination point for the dash
         Vector3 dashDestination = transform.position + dashDirection * dashDistance;

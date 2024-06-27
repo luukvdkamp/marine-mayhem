@@ -5,22 +5,25 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public bool spawnEnemy;
-    private bool hasSpawnedEnemy;
+    public bool hasSpawnedEnemy;
 
     //position to spawn
     public Transform[] spawnPositions;
 
     //enemy that are alive
-    private GameObject[] currentEnemy;
-    private int enemyAliveCounter;
+    public List<GameObject> currentEnemy;
 
-    //enemy types
-    public GameObject dashEnemy;
+    //enemy type
     public GameObject bounceEnemy;
 
     //amount of waves
     public int amountOfWaves;
-    private int waveCounter;
+    public int waveCounter;
+
+    private void Start()
+    {
+        currentEnemy = new List<GameObject>();
+    }
 
     void Update()
     {
@@ -28,37 +31,31 @@ public class EnemySpawner : MonoBehaviour
         {
             for(int i = 0; i < spawnPositions.Length; i++)
             {
-                int randomEnemy = Random.Range(1, 3);
-
-                if(randomEnemy == 1)
-                {
-                    GameObject spawnedEnemy = Instantiate(dashEnemy, spawnPositions[i].position, Quaternion.identity);
-                    currentEnemy[i] = spawnedEnemy;
-                }
-
-                else
-                {
-                    GameObject spawnedEnemy = Instantiate(bounceEnemy, spawnPositions[i].position, Quaternion.identity);
-                    currentEnemy[i] = spawnedEnemy;
-                }
+                GameObject spawnedEnemy = Instantiate(bounceEnemy, spawnPositions[i].position, Quaternion.identity);
+                currentEnemy.Add(spawnedEnemy);
+                print("spawning");
             }
 
             hasSpawnedEnemy = true;
             waveCounter++;
         }
 
-        for (int i = 0; i < currentEnemy.Length; i++)
-        {
-            if (currentEnemy[i] != null)
-            {
-                enemyAliveCounter++;
-            }
-        }
-
-        //all dead
-        if (enemyAliveCounter == 0)
+        if (currentEnemy.Count == 0) //wave defeated
         {
             hasSpawnedEnemy = false;
+            print("defeated");
+        }
+
+        else
+        {
+            //go backwards through list to remove destroyed GameObjects
+            for (int i = currentEnemy.Count - 1; i >= 0; i--)
+            {
+                if (currentEnemy[i] == null) //check if GameObject has been destroyed
+                {
+                    currentEnemy.RemoveAt(i); //remove destroyed GameObject from the list
+                }
+            }
         }
     }
 
