@@ -48,6 +48,11 @@ public class Bullet : MonoBehaviour
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
         }
 
+        else if (collision.gameObject.tag == "bossBullet")
+        {
+            collision.transform.LookAt(collision.gameObject.GetComponent<EnemyBullet>().bulletSender.transform.position);
+        }
+
         else
         {
             //explosion particle

@@ -6,6 +6,8 @@ public class EnemyBullet : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
+    
+    public GameObject bulletSender; //for boss bullets
 
     void Update()
     {
@@ -30,6 +32,15 @@ public class EnemyBullet : MonoBehaviour
         else if (collision.gameObject.tag == "enemy")
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+        }
+
+        //player reflected bullet
+        else if (collision.gameObject.tag == "boss")
+        {
+            collision.gameObject.GetComponent<Boss>().isHit = true;
+            collision.gameObject.GetComponent<Boss>().bulletDamage = 1;
+
+            Destroy(gameObject);
         }
     }
 

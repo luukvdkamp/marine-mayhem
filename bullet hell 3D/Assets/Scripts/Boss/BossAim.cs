@@ -43,6 +43,8 @@ public class BossAim : MonoBehaviour
                     bulletPrefab.transform.localScale = new Vector3(bulletSize, bulletSize, bulletSize);
                     cooldownCounter = 0;
 
+                    //used for bullet reflecting
+                    bulletPrefab.GetComponent<EnemyBullet>().bulletSender = gameObject;
                 }
             }
 
@@ -64,6 +66,9 @@ public class BossAim : MonoBehaviour
                         bulletPrefab.transform.localScale = new Vector3(bulletSize, bulletSize, bulletSize);
                         sprayTime = 0;
                         bulletCounter++;
+
+                        //used for bullet reflecting
+                        bulletPrefab.GetComponent<EnemyBullet>().bulletSender = gameObject;
                     }
 
                     if(bulletCounter >= amountOfBullets)
