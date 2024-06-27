@@ -11,7 +11,7 @@ public class Finish : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            //AudioManager.instance.FadeClip(null, calmMusic);
+            AudioManager.instance.FadeClip(null, calmMusic);
 
             SceneManager.LoadScene(0);
         }
