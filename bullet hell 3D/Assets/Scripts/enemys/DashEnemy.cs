@@ -23,6 +23,7 @@ public class DashEnemy : MonoBehaviour
     private void Start()
     {
         dashResetTime = Random.Range(minDashReset, maxDashReset);
+        player = GameObject.Find("Player").transform;
     }
 
     void Update()
