@@ -1,21 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject fastBullet;
+
+    public float fastBulletTime;
+    private float fastBulletCounter;
+    private bool isFiring;
+    public Slider chargeFastBulletSlider;
+
     private float cooldownCounter;
     public float cooldown;
     public Transform shootPosition;
+
+    private void Start()
+    {
+        chargeFastBulletSlider.maxValue = fastBulletTime;   
+    }
+
     void Update()
     {
         cooldownCounter += Time.deltaTime;
-        if(Input.GetButtonDown("Fire1") && cooldownCounter > cooldown)
+        if(Input.GetButton("Fire1") && cooldownCounter > cooldown)
         {
-            GameObject prefabBullet = Instantiate(bullet, shootPosition.position, transform.localRotation);
-            cooldownCounter = 0;
+            fastBulletCounter += Time.deltaTime;
+            chargeFastBulletSlider.value += Time.deltaTime;
+            isFiring = true;
 
+
+        }
+
+        if(Input.GetButtonUp("Fire1") && isFiring)
+        {
+            if (fastBulletCounter < fastBulletTime)
+            {
+                GameObject prefabBullet = Instantiate(bullet, shootPosition.position, transform.localRotation);
+            }
+
+            else
+            {
+                GameObject prefabFastBullet = Instantiate(fastBullet, shootPosition.position, transform.localRotation);
+            }
+            isFiring = false;
+            cooldownCounter = 0;
+            fastBulletCounter = 0;
+            chargeFastBulletSlider.value = 0;
         }
     }
 }

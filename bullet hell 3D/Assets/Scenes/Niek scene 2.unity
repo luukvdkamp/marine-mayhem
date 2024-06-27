@@ -14162,6 +14162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8792934593336016665, guid: ed8df5da8f69d4c449c36954ac2f5860, type: 3}
+  fastBullet: {fileID: 6693880397540658441, guid: e558d389818fc534bb500caf02c86939,
+    type: 3}
+  fastBulletTime: 0.7
+  chargeFastBulletSlider: {fileID: 1801399487}
   cooldown: 0.2
   shootPosition: {fileID: 53421460}
 --- !u!54 &1514787473
@@ -15233,6 +15237,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1238781557219513370, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4646106918098527684, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_IsActive
@@ -15388,6 +15397,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7164586048530849768, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7496997198205291916, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_IsActive
@@ -15435,6 +15449,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1801399487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4622916506116391675, guid: 0a96b239e7f75484ea5124b10fa7336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801399482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1862015792

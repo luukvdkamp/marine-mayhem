@@ -7,6 +7,12 @@ public class Bullet : MonoBehaviour
     public float speed;
     public int bulletDamage;
     public GameObject explosionParticle;
+    public GameObject soundEffectWhenShoot;
+
+    private void Start()
+    {
+        Instantiate(soundEffectWhenShoot, transform.position, Quaternion.identity);
+    }
 
     void Update()
     {
