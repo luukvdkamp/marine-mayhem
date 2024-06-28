@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
     public SoundClip calmMusic;
-
+    public int sceneToLoad;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
             AudioManager.instance.FadeClip(null, calmMusic);
 
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

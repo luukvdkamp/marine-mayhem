@@ -2416,7 +2416,7 @@ MonoBehaviour:
   distance: 80
   boat: {fileID: 167265012}
   text: {fileID: 1408260431}
-  scene: 2
+  scene: 3
   popupSound: {fileID: 1330411534}
   overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
   overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}
@@ -3457,7 +3457,7 @@ MonoBehaviour:
   distance: 80
   boat: {fileID: 167265012}
   text: {fileID: 572108654}
-  scene: 1
+  scene: 2
   popupSound: {fileID: 1978730056}
   overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
   overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}

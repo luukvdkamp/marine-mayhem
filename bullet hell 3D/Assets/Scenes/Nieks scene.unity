@@ -32168,3 +32168,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calmMusic: {fileID: 11400000, guid: 63389419304691e4990f6193c779f475, type: 2}
+  sceneToLoad: 1
