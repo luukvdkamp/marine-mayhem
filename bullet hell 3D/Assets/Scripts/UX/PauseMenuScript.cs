@@ -14,7 +14,7 @@ public class PauseMenuScript : MonoBehaviour
     public KeyCode pauseKey;
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetKeyDown(pauseKey))
         {
             if (gameIsPaused)
             {
