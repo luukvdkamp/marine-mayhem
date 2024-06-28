@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niek scene 2.unity
     guid: 84e0962e473abe54c80be9fdb3e9133a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b67ee6f1f3c7b6748a89fc092e0357d9
   m_configObjects: {}
