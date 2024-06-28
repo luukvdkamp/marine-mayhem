@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Oxygen : MonoBehaviour
 {
     public int secondsToReachFinish;
-    private float currentOxygen;
+    public float currentOxygen;
     public PlayerHealth playerHealth;
 
     [Header("UI")]

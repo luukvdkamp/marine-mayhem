@@ -20,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
     public int amountOfWaves;
     public int waveCounter;
 
+    //door to open (optional)
+    public GameObject doorToOpen;
+
     private void Start()
     {
         currentEnemy = new List<GameObject>();
@@ -27,36 +30,49 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if(spawnEnemy && hasSpawnedEnemy == false && waveCounter <= amountOfWaves)
+        if(spawnEnemy)
         {
-            for(int i = 0; i < spawnPositions.Length; i++)
+            if (hasSpawnedEnemy == false && waveCounter <= amountOfWaves)
             {
-                GameObject spawnedEnemy = Instantiate(bounceEnemy, spawnPositions[i].position, Quaternion.identity);
-                currentEnemy.Add(spawnedEnemy);
-                print("spawning");
+                for (int i = 0; i < spawnPositions.Length; i++)
+                {
+                    GameObject spawnedEnemy = Instantiate(bounceEnemy, spawnPositions[i].position, Quaternion.identity);
+                    currentEnemy.Add(spawnedEnemy);
+                    print("spawning");
+                }
+
+                hasSpawnedEnemy = true;
+                waveCounter++;
             }
 
-            hasSpawnedEnemy = true;
-            waveCounter++;
-        }
-
-        if (currentEnemy.Count == 0) //wave defeated
-        {
-            hasSpawnedEnemy = false;
-            print("defeated");
-        }
-
-        else
-        {
-            //go backwards through list to remove destroyed GameObjects
-            for (int i = currentEnemy.Count - 1; i >= 0; i--)
+            if (currentEnemy.Count == 0) //wave defeated
             {
-                if (currentEnemy[i] == null) //check if GameObject has been destroyed
+                hasSpawnedEnemy = false;
+                print("defeated");
+
+                if (waveCounter >= amountOfWaves)
                 {
-                    currentEnemy.RemoveAt(i); //remove destroyed GameObject from the list
+                    //open door
+                    if (doorToOpen != null)
+                    {
+                        Destroy(doorToOpen);
+                    }
+                }
+            }
+
+            else
+            {
+                //go backwards through list to remove destroyed GameObjects
+                for (int i = currentEnemy.Count - 1; i >= 0; i--)
+                {
+                    if (currentEnemy[i] == null) //check if GameObject has been destroyed
+                    {
+                        currentEnemy.RemoveAt(i); //remove destroyed GameObject from the list
+                    }
                 }
             }
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)

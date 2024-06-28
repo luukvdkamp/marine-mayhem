@@ -96,6 +96,6 @@ public class PlayerHealth : MonoBehaviour
             AudioManager.instance.FadeClip(null, calm);
         }
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
