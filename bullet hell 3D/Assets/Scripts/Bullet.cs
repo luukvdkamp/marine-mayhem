@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "boss")
         {
+            //do boss damage
             collision.gameObject.GetComponent<Boss>().isHit = true;
             collision.gameObject.GetComponent<Boss>().bulletDamage = bulletDamage;
 
@@ -50,7 +51,14 @@ public class Bullet : MonoBehaviour
 
         else if (collision.gameObject.tag == "bossBullet")
         {
+            //send bullet back
             collision.transform.LookAt(collision.gameObject.GetComponent<EnemyBullet>().bulletSender.transform.position);
+        }
+
+        else if (collision.gameObject.tag == "bullet")
+        {
+            //go through enemy bullet
+            Destroy(collision.gameObject);
         }
 
         else
