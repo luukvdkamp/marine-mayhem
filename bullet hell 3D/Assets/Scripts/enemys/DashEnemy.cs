@@ -29,7 +29,7 @@ public class DashEnemy : MonoBehaviour
     {
         if(player == null)
         {
-            player = GameObject.Find("Player");
+            player = GameObject.Find("player");
         }
 
         // Check if the player is within the dash range
