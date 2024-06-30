@@ -15,6 +15,7 @@ public class Oxygen : MonoBehaviour
     public Image imageToFade;
     public float fadeDuration = 1f;
     private bool hasStartedFading;
+    private Coroutine fadeCoroutine;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class Oxygen : MonoBehaviour
     {
         currentOxygen -= Time.deltaTime;
 
-        // Calculate the fill amount for the oxygen meter
+        //calculate fill amount for the oxygen meter
         float fillAmount = Mathf.Clamp01(currentOxygen / secondsToReachFinish);
         oxygenMeter.fillAmount = fillAmount;
 
@@ -34,20 +35,32 @@ public class Oxygen : MonoBehaviour
             playerHealth.noOxygen = true;
         }
 
-        if(currentOxygen < secondsToReachFinish/4 && hasStartedFading == false) // 1/4 deel van de oxygen over
+        if (currentOxygen < secondsToReachFinish / 4)
         {
-            StartCoroutine(FadeToBlackAndTransparent());
-            hasStartedFading = true;
+            if (!hasStartedFading)
+            {
+                fadeCoroutine = StartCoroutine(FadeToBlackAndTransparent());
+                hasStartedFading = true;
+            }
+        }
+        else
+        {
+            if (hasStartedFading)
+            {
+                StopCoroutine(fadeCoroutine);
+                imageToFade.color = new Color(0f, 0f, 0f, 0f); //reset to fully transparent
+                hasStartedFading = false;
+            }
         }
     }
 
     IEnumerator FadeToBlackAndTransparent()
     {
-        while (true) // Loop indefinitely
+        while (true)
         {
             float timer = 0f;
             Color startColor = imageToFade.color;
-            Color endColor = new Color(0f, 0f, 0f, 1f); // Fade to black
+            Color endColor = new Color(0f, 0f, 0f, 1f);
             while (timer < fadeDuration)
             {
                 timer += Time.deltaTime;
@@ -55,10 +68,10 @@ public class Oxygen : MonoBehaviour
                 yield return null;
             }
 
-            // After fading to black, reset the timer and fade back to fully transparent
+            //reset the timer and fade to transparent
             timer = 0f;
-            startColor = endColor; // Start from the black color
-            endColor = new Color(0f, 0f, 0f, 0f); // Fully transparent
+            startColor = endColor;
+            endColor = new Color(0f, 0f, 0f, 0f);
             while (timer < fadeDuration)
             {
                 timer += Time.deltaTime;
