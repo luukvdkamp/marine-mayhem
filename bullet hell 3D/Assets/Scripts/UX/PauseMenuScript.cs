@@ -15,6 +15,7 @@ public class PauseMenuScript : MonoBehaviour
     public KeyCode pauseKey;
 
     public MovementSwitch movementSwitch;
+    public bool inOverworld; //change in editor
     void Update()
     {
         if (Input.GetKeyDown(pauseKey))
@@ -40,7 +41,10 @@ public class PauseMenuScript : MonoBehaviour
         Cursor.visible = false;
         gameIsPaused = false;
 
-        movementSwitch.inMenu = false;
+        if(inOverworld == false)
+        {
+            movementSwitch.inMenu = false;
+        }
     }
 
     public void Pause()
@@ -52,7 +56,10 @@ public class PauseMenuScript : MonoBehaviour
         Cursor.visible = true;
         gameIsPaused = true;
 
-        movementSwitch.inMenu = true;
+        if (inOverworld == false)
+        {
+            movementSwitch.inMenu = true;
+        }
     }
     public void ReturnToMenu()
     {
