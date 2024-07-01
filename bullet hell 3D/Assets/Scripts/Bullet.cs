@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "boss")
         {
             //do boss damage
+            collision.gameObject.GetComponent<DamageFlash>().FlashStart();
             collision.gameObject.GetComponent<Boss>().isHit = true;
             collision.gameObject.GetComponent<Boss>().bulletDamage = bulletDamage;
 

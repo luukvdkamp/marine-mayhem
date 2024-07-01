@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5513779959611685039}
   - component: {fileID: 1797640598398746844}
   - component: {fileID: 4641194219982346941}
+  - component: {fileID: 8012589365135690792}
   m_Layer: 0
   m_Name: boss
   m_TagString: boss
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e06deacb7d1934bba392e5c5020daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   isHit: 0
   playerInBossArea: 0
   bossName: 
@@ -121,7 +123,10 @@ MonoBehaviour:
   bossHealthCanvas: {fileID: 0}
   healthSlider: {fileID: 0}
   bossNameText: {fileID: 0}
+  calmMusic: {fileID: 0}
+  bossMusic: {fileID: 0}
   bulletDamage: 0
+  firstTimeEncounter: 0
 --- !u!82 &5513779959611685039
 AudioSource:
   m_ObjectHideFlags: 0
@@ -247,7 +252,25 @@ MonoBehaviour:
   boss: {fileID: 5513779959611685026}
   shootCooldown: 2
   bullet: {fileID: 8792934593336016665, guid: 190ae05d056fa0842b897c315f9358fd, type: 3}
+  bulletSize: 0
   spawn: {fileID: 3725154687347424444}
+  spray: 0
+  sprayCooldown: 0
+  amountOfBullets: 0
+--- !u!114 &8012589365135690792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513779959611685029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a9a643cdc86994982efe193261f501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  flashTime: 0.15
 --- !u!1 &6822743982639712086
 GameObject:
   m_ObjectHideFlags: 0
