@@ -12247,6 +12247,12 @@ PrefabInstance:
       objectReference: {fileID: 22091748}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756c60e55e5f18c44bcdf080cc4f5be8, type: 3}
+--- !u!1 &833672085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5971360106782745875, guid: 0a96b239e7f75484ea5124b10fa7336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801399482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &840552151
 GameObject:
   m_ObjectHideFlags: 0
@@ -14297,6 +14303,7 @@ MonoBehaviour:
     type: 3}
   fastBulletTime: 0.7
   chargeFastBulletSlider: {fileID: 1801399487}
+  chargeSliderVisibilityObject: {fileID: 833672085}
   cooldown: 0.2
   shootPosition: {fileID: 53421460}
 --- !u!54 &1514787473
@@ -15668,7 +15675,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1801399482}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 833672085}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}

@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
     private float fastBulletCounter;
     private bool isFiring;
     public Slider chargeFastBulletSlider;
+    public GameObject chargeSliderVisibilityObject;
 
     private float cooldownCounter;
     public float cooldown;
@@ -28,6 +29,7 @@ public class Shooting : MonoBehaviour
         if(Input.GetButton("Fire1") && cooldownCounter > cooldown)
         {
             fastBulletCounter += Time.deltaTime;
+            chargeSliderVisibilityObject.SetActive(true);
             chargeFastBulletSlider.value += Time.deltaTime;
             isFiring = true;
 
@@ -49,6 +51,7 @@ public class Shooting : MonoBehaviour
             cooldownCounter = 0;
             fastBulletCounter = 0;
             chargeFastBulletSlider.value = 0;
+            chargeSliderVisibilityObject.SetActive(false);
         }
     }
 }
