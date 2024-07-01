@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niek scene 2.unity
     guid: 84e0962e473abe54c80be9fdb3e9133a
+  - enabled: 1
+    path: Assets/Scenes/Disco Volante.unity
+    guid: 98391ad2f21eb864f98be05986c3b793
   m_configObjects: {}
