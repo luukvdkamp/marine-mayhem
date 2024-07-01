@@ -35,6 +35,7 @@ public class MovementSwitch : MonoBehaviour
     public bool inGang;
     void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.E))
         {
             if(inGang)
@@ -47,6 +48,7 @@ public class MovementSwitch : MonoBehaviour
                 inGang = true;
             }
         }
+        */
 
         //3D
         if(inGang == false)
