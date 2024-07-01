@@ -15,7 +15,9 @@ public class MovementSwitch : MonoBehaviour
 
     public ColliderStop colliderStop;
 
+
     public GameObject crosshair;
+    public bool inMenu;
 
     [Header("3DMovement")]
     public float sensitivity = 100f;
@@ -53,7 +55,16 @@ public class MovementSwitch : MonoBehaviour
             cdtwo.SetActive(false);
             cdthree.SetActive(true);
             submarine.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+
+            if(inMenu == false)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
 
             float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;

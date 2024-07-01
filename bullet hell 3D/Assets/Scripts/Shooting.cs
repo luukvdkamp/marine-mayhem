@@ -20,7 +20,8 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        chargeFastBulletSlider.maxValue = fastBulletTime;   
+        chargeFastBulletSlider.maxValue = fastBulletTime;
+        chargeSliderVisibilityObject.SetActive(false);
     }
 
     void Update()

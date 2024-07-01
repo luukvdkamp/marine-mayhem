@@ -8,10 +8,13 @@ public class PauseMenuScript : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
 
     public AudioSource buttonClick;
 
     public KeyCode pauseKey;
+
+    public MovementSwitch movementSwitch;
     void Update()
     {
         if (Input.GetKeyDown(pauseKey))
@@ -32,9 +35,12 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 1f;
         buttonClick.Play();
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false); //set ook dit menu uit - Niek
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         gameIsPaused = false;
+
+        movementSwitch.inMenu = false;
     }
 
     public void Pause()
@@ -45,6 +51,8 @@ public class PauseMenuScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         gameIsPaused = true;
+
+        movementSwitch.inMenu = true;
     }
     public void ReturnToMenu()
     {

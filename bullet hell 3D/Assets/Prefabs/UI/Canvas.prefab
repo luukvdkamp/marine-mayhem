@@ -1269,7 +1269,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2537890501327683244}
+      - m_Target: {fileID: 7818605055240468524}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5547,6 +5547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 7818605055240468524}
+  settingsMenuUI: {fileID: 8827982583521352738}
   buttonClick: {fileID: 5524981616992189382}
   pauseKey: 27
 --- !u!114 &4646106918105877630
@@ -6731,6 +6732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToReachFinish: 60
+  currentOxygen: 0
   playerHealth: {fileID: 0}
   oxygenMeter: {fileID: 4646106919070424682}
   imageToFade: {fileID: 0}

@@ -14340,6 +14340,7 @@ MonoBehaviour:
   submarine: {fileID: 22091747}
   colliderStop: {fileID: 1514787470}
   crosshair: {fileID: 349924866}
+  inMenu: 0
   sensitivity: 300
   threeD: {fileID: 334011918}
   downSpeedThree: 4
@@ -15595,6 +15596,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6502143870105880984, guid: 0a96b239e7f75484ea5124b10fa7336e,
+        type: 3}
+      propertyPath: movementSwitch
+      value: 
+      objectReference: {fileID: 1514787474}
     - target: {fileID: 7164586048530849768, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_AnchorMax.y
