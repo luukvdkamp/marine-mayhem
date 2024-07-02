@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 431674976}
   - component: {fileID: 431674978}
   m_Layer: 0
-  m_Name: bossTrigger
+  m_Name: bossTriggerWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   currentEnemy: []
   bounceEnemy: {fileID: 1376589222288209911, guid: 878c9bd0f88022446a9f8c4a5cf636f8,
     type: 3}
-  amountOfWaves: 2
+  amountOfWaves: 1
   waveCounter: 0
   doorToOpen: {fileID: 1999012328}
 --- !u!1 &439413914

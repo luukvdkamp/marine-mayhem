@@ -1273,7 +1273,7 @@ PrefabInstance:
     - target: {fileID: 7818605055240468524, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466351725084608282, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
@@ -2233,7 +2233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062869103
 GameObject:
@@ -4506,7 +4506,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2101838110
 AudioSource:
