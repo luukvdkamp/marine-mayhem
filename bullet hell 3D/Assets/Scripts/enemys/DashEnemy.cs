@@ -9,7 +9,6 @@ public class DashEnemy : MonoBehaviour
     private float dashResetTime;
     private float resetCounter;
 
-    public float distanceBeforeAbleToDash;
 
     public float dashSpeed;
     public float dashDistance;
@@ -32,31 +31,16 @@ public class DashEnemy : MonoBehaviour
             player = GameObject.FindWithTag("Player");
         }
 
-        // Check if the player is within the dash range
-        if (Vector3.Distance(transform.position, player.transform.position) < distanceBeforeAbleToDash)
+        //dash
+        resetCounter += Time.deltaTime;
+        if (resetCounter > dashResetTime)
         {
-            ableToDash = true;
-        }
-
-        else
-        {
-            ableToDash = false;
             resetCounter = 0;
-        }
+            dashResetTime = Random.Range(minDashReset, maxDashReset);
+            StartCoroutine(DashTowardsPlayer());
 
-        // If able to dash, initiate the dash
-        if (ableToDash)
-        {
-            resetCounter += Time.deltaTime;
-            if (resetCounter > dashResetTime)
-            {
-                resetCounter = 0;
-                dashResetTime = Random.Range(minDashReset, maxDashReset);
-                StartCoroutine(DashTowardsPlayer());
-
-                //activate spikes
-                redPuf.SetActive(true);
-            }
+            //activate spikes
+            redPuf.SetActive(true);
         }
     }
 

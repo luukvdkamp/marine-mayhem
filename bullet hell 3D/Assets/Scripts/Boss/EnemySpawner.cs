@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> currentEnemy;
 
     //enemy type
-    public GameObject bounceEnemy;
+    public GameObject enemyType;
 
     //amount of waves
     public int amountOfWaves;
@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 for (int i = 0; i < spawnPositions.Length; i++)
                 {
-                    GameObject spawnedEnemy = Instantiate(bounceEnemy, spawnPositions[i].position, Quaternion.identity);
+                    GameObject spawnedEnemy = Instantiate(enemyType, spawnPositions[i].position, Quaternion.identity);
                     currentEnemy.Add(spawnedEnemy);
                     print("spawning");
                 }

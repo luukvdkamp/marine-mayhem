@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2545426658444561579}
   - component: {fileID: 4807805971581902139}
   m_Layer: 0
-  m_Name: PufferFish
+  m_Name: PufferFishFast
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,9 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793fdabb29712dd4f9eeaea33fd7f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDashReset: 2
-  maxDashReset: 5
-  dashSpeed: 3
-  dashDistance: 7
+  minDashReset: 1
+  maxDashReset: 4
+  dashSpeed: 7
+  dashDistance: 15
   player: {fileID: 0}
   redPuf: {fileID: 1136550019091366025}

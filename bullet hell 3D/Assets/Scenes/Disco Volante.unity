@@ -2427,7 +2427,7 @@ MonoBehaviour:
   - {fileID: 222483818}
   - {fileID: 1286002511}
   currentEnemy: []
-  bounceEnemy: {fileID: 1376589222288209911, guid: 878c9bd0f88022446a9f8c4a5cf636f8,
+  enemyType: {fileID: 1376589222288209911, guid: 878c9bd0f88022446a9f8c4a5cf636f8,
     type: 3}
   amountOfWaves: 1
   waveCounter: 0
@@ -6435,7 +6435,7 @@ MonoBehaviour:
   - {fileID: 741959273}
   - {fileID: 357792162}
   currentEnemy: []
-  bounceEnemy: {fileID: 1398962159143752880, guid: 756c60e55e5f18c44bcdf080cc4f5be8,
+  enemyType: {fileID: 1398962159143752880, guid: 6c9afe823630e864aba852d3c672b1eb,
     type: 3}
   amountOfWaves: 0
   waveCounter: 0
@@ -6793,8 +6793,7 @@ MonoBehaviour:
   - {fileID: 27028019266787866}
   - {fileID: 27028020751253114}
   currentEnemy: []
-  bounceEnemy: {fileID: 27028020813467918, guid: 8ecc6a333108fec4a8db2427775a4de7,
-    type: 3}
+  enemyType: {fileID: 27028020813467918, guid: 8ecc6a333108fec4a8db2427775a4de7, type: 3}
   amountOfWaves: 0
   waveCounter: 0
   doorToOpen: {fileID: 971047552}
@@ -10914,8 +10913,7 @@ MonoBehaviour:
   - {fileID: 27028020674906705}
   - {fileID: 27028019991884244}
   currentEnemy: []
-  bounceEnemy: {fileID: 27028020813467918, guid: ca32c077044cc264c9d08a6627f2508c,
-    type: 3}
+  enemyType: {fileID: 27028020813467918, guid: ca32c077044cc264c9d08a6627f2508c, type: 3}
   amountOfWaves: 0
   waveCounter: 0
   doorToOpen: {fileID: 1444963978}
