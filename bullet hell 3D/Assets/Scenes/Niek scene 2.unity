@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53421460}
   m_Layer: 0
-  m_Name: shootPosition
+  m_Name: shootPosition2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6105,6 +6105,7 @@ Transform:
   m_Children:
   - {fileID: 913427470}
   - {fileID: 1000173342}
+  - {fileID: 1053776116}
   m_Father: {fileID: 1514787478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13081,6 +13082,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1053776115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053776116}
+  m_Layer: 0
+  m_Name: shootPosition3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1053776116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053776115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 334011920}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1072937917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 177192729986015, guid: 756c60e55e5f18c44bcdf080cc4f5be8,
@@ -14305,7 +14337,8 @@ MonoBehaviour:
   chargeFastBulletSlider: {fileID: 1801399487}
   chargeSliderVisibilityObject: {fileID: 833672085}
   cooldown: 0.2
-  shootPosition: {fileID: 53421460}
+  shootPositionTwoD: {fileID: 53421460}
+  shootPositionThreeD: {fileID: 1053776116}
 --- !u!54 &1514787473
 Rigidbody:
   m_ObjectHideFlags: 0

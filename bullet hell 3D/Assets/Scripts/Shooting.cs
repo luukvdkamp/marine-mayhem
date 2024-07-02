@@ -16,7 +16,9 @@ public class Shooting : MonoBehaviour
 
     private float cooldownCounter;
     public float cooldown;
-    public Transform shootPosition;
+    private Transform shootPosition;
+    public Transform shootPositionTwoD;
+    public Transform shootPositionThreeD;
 
     private void Start()
     {
@@ -53,6 +55,17 @@ public class Shooting : MonoBehaviour
             fastBulletCounter = 0;
             chargeFastBulletSlider.value = 0;
             chargeSliderVisibilityObject.SetActive(false);
+        }
+
+        //change shoot position
+        if(GetComponent<MovementSwitch>().inGang)
+        {
+            shootPosition = shootPositionTwoD;
+        }
+
+        else
+        {
+            shootPosition = shootPositionThreeD;
         }
     }
 }
