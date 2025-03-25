@@ -16,6 +16,9 @@ public class Level : MonoBehaviour
     public SoundClip overworldMusic;
     public SoundClip overworldWaves;
 
+    [HideInInspector]
+    public bool isUnlocked;
+
     void Update()
     {
         if(Vector3.Distance(transform.position, boat.position) < distance)
@@ -29,7 +32,7 @@ public class Level : MonoBehaviour
             GetComponent<Image>().enabled = true;
             text.SetActive(true);
 
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Space) && isUnlocked)
             {
                 AudioManager.instance.FadeClip(null, overworldMusic);
                 AudioManager.instance.FadeClip(null, overworldWaves);

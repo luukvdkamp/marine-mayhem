@@ -59,6 +59,7 @@ public class Bullet : MonoBehaviour
         else if (collision.gameObject.tag == "bullet")
         {
             //go through enemy bullet
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
             Destroy(collision.gameObject);
         }
 

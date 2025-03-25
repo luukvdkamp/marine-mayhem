@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -18,21 +19,25 @@ public class EnemySpawner : MonoBehaviour
 
     //amount of waves
     public int amountOfWaves;
-    public int waveCounter;
+    private int waveCounter = 1;
 
     //door to open (optional)
     public GameObject doorToOpen;
 
+    public GameObject waveText;
+
     private void Start()
     {
         currentEnemy = new List<GameObject>();
+
+        waveCounter = amountOfWaves;
     }
 
     void Update()
     {
         if(spawnEnemy)
         {
-            if (hasSpawnedEnemy == false && waveCounter <= amountOfWaves)
+            if (hasSpawnedEnemy == false && waveCounter >= amountOfWaves)
             {
                 for (int i = 0; i < spawnPositions.Length; i++)
                 {
@@ -42,20 +47,23 @@ public class EnemySpawner : MonoBehaviour
                 }
 
                 hasSpawnedEnemy = true;
-                waveCounter++;
+
             }
 
             if (currentEnemy.Count == 0) //wave defeated
             {
+                waveCounter--;
                 hasSpawnedEnemy = false;
                 print("defeated");
+                waveText.GetComponent<TextMeshProUGUI>().text = waveCounter.ToString();
 
-                if (waveCounter >= amountOfWaves)
+                if (waveCounter <= amountOfWaves)
                 {
                     //open door
                     if (doorToOpen != null)
                     {
                         Destroy(doorToOpen);
+                        Destroy(gameObject);
                     }
                 }
             }
@@ -83,6 +91,18 @@ public class EnemySpawner : MonoBehaviour
             {
                 spawnEnemy = true;
             }
+
+            waveText.SetActive(true);
+            waveText.GetComponent<TextMeshProUGUI>().text = waveCounter.ToString();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            waveText.SetActive(false);
+        }
+    }
+
 }

@@ -7,13 +7,17 @@ public class Finish : MonoBehaviour
 {
     public SoundClip calmMusic;
     public int sceneToLoad;
+
+    [HideInInspector]
+    public bool levelFinished;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
             AudioManager.instance.FadeClip(null, calmMusic);
 
-            SceneManager.LoadScene(sceneToLoad);
+            levelFinished = true;
         }
     }
 }

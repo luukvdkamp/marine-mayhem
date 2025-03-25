@@ -1113,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: 4646106918105877624, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Canvas (max)
       objectReference: {fileID: 0}
     - target: {fileID: 4646106918105877625, guid: 0a96b239e7f75484ea5124b10fa7336e,
         type: 3}
@@ -1363,6 +1363,57 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 528.1424, z: 997.28973}
   m_Center: {x: 0, y: 90.50052, z: 109.30264}
+--- !u!1 &724356008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724356010}
+  - component: {fileID: 724356009}
+  m_Layer: 0
+  m_Name: levelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &724356009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724356008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3855ab7c84ab03b45863da6106ed4624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelsUnlocked:
+  - {fileID: 1978730055}
+  - {fileID: 1330411530}
+  - {fileID: 2144750735}
+  - {fileID: 0}
+  unlockNextLevel: 0
+  overworldScene: 0
+--- !u!4 &724356010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724356008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 126.55366, y: 29.470266, z: -82.357635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732665988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1510,7 @@ GameObject:
   - component: {fileID: 753984452}
   - component: {fileID: 753984451}
   m_Layer: 5
-  m_Name: CanvasMarker
+  m_Name: CanvasMarker (levels)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2718,6 +2769,7 @@ MonoBehaviour:
   popupSound: {fileID: 1330411534}
   overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
   overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}
+  isUnlocked: 0
 --- !u!114 &1330411531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3720,6 +3772,7 @@ MonoBehaviour:
   popupSound: {fileID: 0}
   overworldMusic: {fileID: 0}
   overworldWaves: {fileID: 0}
+  isUnlocked: 0
 --- !u!114 &1717553592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,6 +4132,7 @@ MonoBehaviour:
   popupSound: {fileID: 1978730056}
   overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
   overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}
+  isUnlocked: 0
 --- !u!82 &1978730056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4915,6 +4969,7 @@ MonoBehaviour:
   popupSound: {fileID: 2144750734}
   overworldMusic: {fileID: 11400000, guid: 0ae0763a838be344b9d1d323657b0e4b, type: 2}
   overworldWaves: {fileID: 11400000, guid: ae6458f1cfb707e4b958b46cb2f6ec91, type: 2}
+  isUnlocked: 0
 --- !u!114 &2144750736
 MonoBehaviour:
   m_ObjectHideFlags: 0
