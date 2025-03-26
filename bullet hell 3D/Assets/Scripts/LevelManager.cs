@@ -6,41 +6,26 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public Level[] levelsUnlocked; // all level scripts
-    public static LevelManager Instance;
+    public GameObject[] levelLockedBanners;
 
-    public bool unlockNextLevel; // make code unlock new level
-    private int levelCount; // current levels unlocked
-    private Finish currentFinish; // save the finish trigger in current level
-    public int overworldScene;
-
-    private void Awake()
-    {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        //unlock lvl 1
-        unlockNextLevel = true;
-
-        currentFinish = FindAnyObjectByType<Finish>();
-    }
+    public LevelDataSaver levelDataSaver;
+    private int currentLevel;
 
     private void Update()
     {
+        if(levelDataSaver == null)
+        {
+            levelDataSaver = FindAnyObjectByType<LevelDataSaver>();
+        }
+
         //gets activated when level finished
-        if(unlockNextLevel)
+        if(currentLevel != levelDataSaver.currentLevel || currentLevel == 0)
         {
-            levelsUnlocked[levelCount].isUnlocked = true;
-            levelCount++;
-            unlockNextLevel = false;
+            currentLevel = levelDataSaver.currentLevel;
+
+            levelsUnlocked[currentLevel].isUnlocked = true;
+            levelLockedBanners[currentLevel].SetActive(false);
         }
-
-
-        if(currentFinish.levelFinished)
-        {
-            unlockNextLevel = true;
-            currentFinish.levelFinished = false;
-
-            SceneManager.LoadScene(overworldScene);
-        }
+        
     }
 }

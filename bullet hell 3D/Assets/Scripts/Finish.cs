@@ -17,6 +17,8 @@ public class Finish : MonoBehaviour
         {
             AudioManager.instance.FadeClip(null, calmMusic);
 
+            print("trigger");
+
             levelFinished = true;
         }
     }
